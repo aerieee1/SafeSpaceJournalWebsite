@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Safe Space Journal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="main-screen" id="mainScreen">
+
+    <!-- =====================================
+         LOGIN
+         ===================================== -->
+
+    <section
+        class="screen main-content"
+        id="loginScreen"
+    >
+
+        <img
+            src="images/safe_logo.png"
+            alt="Safe Space Logo"
+            class="safe-logo"
+        >
+
+        <p class="safe-place-text">
+            Your Safe Place
+        </p>
+
+        <div class="input-container">
+
+            <label
+                for="email"
+                class="input-label"
+            >
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="Email"
+                autocomplete="email"
+            >
+
+        </div>
+
+        <div class="input-container">
+
+            <label
+                for="password"
+                class="input-label"
+            >
+                Password
+            </label>
+
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    id="password"
+                    class="form-input password-input"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                >
+
+                <button
+                    type="button"
+                    id="togglePassword"
+                    class="password-toggle"
+                    aria-label="Show password"
+                >
+                    👁
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="forgot-password-container">
+
+            <button
+                type="button"
+                id="forgotPasswordBtn"
+                class="forgot-password"
+            >
+                Forgot Password?
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            id="loginBtn"
+            class="login-button"
+        >
+            Log In
+        </button>
+
+        <button
+            type="button"
+            id="createAccountBtn"
+            class="create-account-button"
+        >
+            Create Account
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         OTP
+         ===================================== -->
+
+    <section
+        class="screen main-content hidden"
+        id="otpScreen"
+    >
+
+        <img
+            src="images/safe_logo.png"
+            alt="Safe Space Logo"
+            class="safe-logo"
+        >
+
+        <h1 class="screen-title">
+            Verify Your Email
+        </h1>
+
+        <p class="screen-description">
+            Enter the 6-digit verification code sent to
+        </p>
+
+        <p
+            class="otp-email"
+            id="otpEmail"
+        ></p>
+
+        <div class="otp-container">
+
+            <input type="text" inputmode="numeric" maxlength="1" class="otp-input">
+            <input type="text" inputmode="numeric" maxlength="1" class="otp-input">
+            <input type="text" inputmode="numeric" maxlength="1" class="otp-input">
+            <input type="text" inputmode="numeric" maxlength="1" class="otp-input">
+            <input type="text" inputmode="numeric" maxlength="1" class="otp-input">
+            <input type="text" inputmode="numeric" maxlength="1" class="otp-input">
+
+        </div>
+
+        <p
+            class="otp-timer"
+            id="otpTimer"
+        >
+            OTP expires in 05:00
+        </p>
+
+        <button
+            type="button"
+            id="verifyOtpBtn"
+            class="primary-button"
+        >
+            Verify
+        </button>
+
+        <button
+            type="button"
+            id="resendOtpBtn"
+            class="text-button"
+        >
+            Resend Code
+        </button>
+
+        <button
+            type="button"
+            id="backFromOtpBtn"
+            class="text-button back-button"
+        >
+            Back
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         VERIFY PASSCODE
+         ===================================== -->
+
+    <section
+        class="screen main-content hidden"
+        id="verifyPasscodeScreen"
+    >
+
+        <img
+            src="images/cutiepie.png"
+            alt="Safe Space Logo"
+            class="safe-logo"
+        >
+
+        <h1 class="screen-title">
+            Welcome back!
+        </h1>
+
+        <p class="screen-description spaced-description">
+            Enter your passcode to continue where you left off.
+        </p>
+
+        <div class="passcode-container">
+
+            <input type="password" inputmode="numeric" maxlength="1" class="verify-passcode-input">
+            <input type="password" inputmode="numeric" maxlength="1" class="verify-passcode-input">
+            <input type="password" inputmode="numeric" maxlength="1" class="verify-passcode-input">
+            <input type="password" inputmode="numeric" maxlength="1" class="verify-passcode-input">
+
+        </div>
+
+        <p
+            class="passcode-clue hidden"
+            id="verificationClue"
+        ></p>
+
+        <button
+            type="button"
+            id="verifyPasscodeBtn"
+            class="primary-button"
+        >
+            Continue
+        </button>
+
+        <button
+            type="button"
+            id="forgotPasscodeBtn"
+            class="text-button"
+        >
+            Forgot Passcode?
+        </button>
+
+        <button
+            type="button"
+            id="useAnotherAccountBtn"
+            class="text-button"
+        >
+            Use Another Account
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         CREATE PASSCODE
+         ===================================== -->
+
+    <section
+        class="screen main-content hidden"
+        id="passcodeScreen"
+    >
+
+        <img
+            src="images/safe_logo.png"
+            alt="Safe Space Logo"
+            class="safe-logo"
+        >
+
+        <h1 class="screen-title">
+            Create Your Passcode
+        </h1>
+
+        <p class="screen-description spaced-description">
+            Create a 4-digit passcode to keep
+            your Safe Space private.
+        </p>
+
+        <div class="passcode-container">
+
+            <input type="password" inputmode="numeric" maxlength="1" class="passcode-input">
+            <input type="password" inputmode="numeric" maxlength="1" class="passcode-input">
+            <input type="password" inputmode="numeric" maxlength="1" class="passcode-input">
+            <input type="password" inputmode="numeric" maxlength="1" class="passcode-input">
+
+        </div>
+
+        <button
+            type="button"
+            id="savePasscodeBtn"
+            class="primary-button"
+        >
+            Continue
+        </button>
+
+        <button
+            type="button"
+            id="backFromPasscodeBtn"
+            class="text-button back-button"
+        >
+            Back
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         PASSCODE CLUE
+         ===================================== -->
+
+    <section
+        class="screen main-content hidden"
+        id="clueScreen"
+    >
+
+        <img
+            src="images/safe_logo.png"
+            alt="Safe Space Logo"
+            class="safe-logo"
+        >
+
+        <h1 class="screen-title">
+            Passcode Clue
+        </h1>
+
+        <p class="screen-description spaced-description">
+            Create a clue that can help you remember
+            your passcode without revealing it.
+        </p>
+
+        <div class="input-container">
+
+            <label
+                for="passcodeClue"
+                class="input-label"
+            >
+                Your Clue
+            </label>
+
+            <input
+                type="text"
+                id="passcodeClue"
+                class="form-input"
+                placeholder="e.g.. My Father's Birthday"
+                maxlength="100"
+            >
+
+        </div>
+
+        <button
+            type="button"
+            id="saveClueBtn"
+            class="primary-button"
+        >
+            Continue
+        </button>
+
+        <button
+            type="button"
+            id="backFromClueBtn"
+            class="text-button back-button"
+        >
+            Back
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         NICKNAME
+         ===================================== -->
+
+    <section
+        class="screen main-content hidden"
+        id="nicknameScreen"
+    >
+
+        <img
+            src="images/safe_logo.png"
+            alt="Safe Space Logo"
+            class="safe-logo"
+        >
+
+        <h1 class="screen-title">
+            What should we call you?
+        </h1>
+
+        <p class="screen-description spaced-description">
+            Choose a nickname for your Safe Space.
+        </p>
+
+        <div class="input-container">
+
+            <label
+                for="nickname"
+                class="input-label"
+            >
+                Nickname
+            </label>
+
+            <input
+                type="text"
+                id="nickname"
+                class="form-input"
+                placeholder="Enter your nickname"
+                maxlength="50"
+            >
+
+        </div>
+
+        <button
+            type="button"
+            id="finishRegistrationBtn"
+            class="primary-button"
+        >
+            Create Account
+        </button>
+
+        <button
+            type="button"
+            id="backFromNicknameBtn"
+            class="text-button back-button"
+        >
+            Back
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         APPLICATION
+         ===================================== -->
+
+    <section
+        class="app-screen hidden"
+        id="appScreen"
+    >
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+
+        <!-- SIDEBAR -->
+
+        <aside
+            class="sidebar"
+            id="sidebar"
+        >
+
+            <div class="sidebar-top">
+
+                <div class="sidebar-brand">
+
+                    <img
+                        src="images/safe_logo.png"
+                        alt="Safe Space Logo"
+                        class="sidebar-logo"
+                    >
+
+                    <div class="sidebar-brand-text">
+
+                        <h2>
+                            Safe Space
+                        </h2>
+
+                        <p>
+                            Your Safe Place
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="sidebar-close-button"
+                    id="sidebarCloseBtn"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <nav class="sidebar-navigation">
+
+                <button
+                    type="button"
+                    class="sidebar-item active"
+                    id="homeNavBtn"
+                >
+                    <span class="sidebar-icon">⌂</span>
+                    <span>Home</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    id="journalNavBtn"
+                >
+                    <span class="sidebar-icon">▤</span>
+                    <span>Journal</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    id="profileNavBtn"
+                >
+                    <span class="sidebar-icon">♡</span>
+                    <span>Profile</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <p>
+                    A little space for your thoughts.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- APP CONTENT -->
+
+        <div class="app-content">
+
+            <header class="app-topbar">
+
+                <button
+                    type="button"
+                    class="hamburger-button"
+                    id="hamburgerBtn"
+                    aria-label="Open menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <div class="topbar-brand">
+
+                    <img
+                        src=""
+                        alt=""
+                        class="topbar-logo"
+                    >
+
+                    <span>
+                        Safe Space
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================
+                 HOME
+                 ================================= -->
+
+            <section
+                class="app-page"
+                id="homePage"
+            >
+
+                <div class="cute-greeting-section">
+
+                    <div class="cute-character-area">
+
+                        <img
+                            src="images/cutiepatootie.png"
+                            alt="Safe Space character"
+                            class="cutie-character"
+                        >
+
+                    </div>
+
+
+                    <div class="speech-bubble">
+
+                        <p class="speech-small-text">
+                            Welcome back ♡
+                        </p>
+
+                        <h1 id="homeGreeting">
+                            How are you, Friend?
+                        </h1>
+
+                        <p class="speech-message">
+                            Whatever you're feeling today,
+                            this is your safe place to let it out.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-section-heading">
+
+                    <p>
+                        What would you like to do?
+                    </p>
+
+                </div>
+
+
+                <div class="home-cards">
+
+                    <button
+                        type="button"
+                        class="home-action-card"
+                        id="writeThoughtBtn"
+                    >
+
+                        <div class="home-card-icon">
+                            ✎
+                        </div>
+
+                        <div class="home-card-text">
+
+                            <h2>
+                                Write your thoughts
+                            </h2>
+
+                            <p>
+                                Take a quiet moment and write
+                                whatever is on your mind.
+                            </p>
+
+                        </div>
+
+                        <div class="home-card-arrow">
+                            ›
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="home-action-card"
+                        id="viewEntriesBtn"
+                    >
+
+                        <div class="home-card-icon">
+                            ▤
+                        </div>
+
+                        <div class="home-card-text">
+
+                            <h2>
+                                View my past entries
+                            </h2>
+
+                            <p>
+                                Look back on your thoughts,
+                                memories, and journal entries.
+                            </p>
+
+                        </div>
+
+                        <div class="home-card-arrow">
+                            ›
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PAST JOURNAL
+                 ================================= -->
+
+            <section
+                class="app-page hidden"
+                id="journalPage"
+            >
+
+                <div class="journal-header">
+
+                    <div>
+
+                        <p class="home-small-text">
+                            Your thoughts
+                        </p>
+
+                        <h1>
+                            Journal
+                        </h1>
+
+                        <p class="journal-subtitle">
+                            A collection of your thoughts and memories.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="add-entry-button"
+                        id="addEntryBtn"
+                    >
+                        <span>＋</span>
+                        Add
+                    </button>
+
+                </div>
+
+                <div class="journal-tools">
+
+                    <div class="journal-search-wrapper">
+
+                        <span class="search-icon">
+                            ⌕
+                        </span>
+
+                        <input
+                            type="search"
+                            id="journalSearchInput"
+                            class="journal-search-input"
+                            placeholder="Search your journal..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="all-filter-button active"
+                        id="allEntriesBtn"
+                    >
+                        ALL
+                    </button>
+
+                </div>
+
+                <p
+                    class="journal-status hidden"
+                    id="journalStatus"
+                ></p>
+
+                <div
+                    class="journal-entry-list"
+                    id="journalEntryList"
+                ></div>
+
+            </section>
+
+
+            <!-- =================================
+                 WRITE / EDIT JOURNAL
+                 ================================= -->
+
+            <section
+                class="app-page hidden"
+                id="writeJournalPage"
+            >
+
+                <div class="write-page-header android-write-header">
+
+                    <button
+                        type="button"
+                        class="journal-back-button"
+                        id="backFromWriteBtn"
+                        aria-label="Back to journal"
+                    >
+                        ‹
+                    </button>
+
+                    <div class="write-heading-copy">
+                        <p class="home-small-text">Your Safe Space</p>
+                        <h1 id="writeJournalHeading">Write your thoughts</h1>
+                        <p class="write-subtitle">Write freely. This space is yours.</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="write-top-save-button"
+                        id="saveEntryBtn"
+                    >
+                        Save
+                    </button>
+
+                </div>
+
+                <div class="android-editor-card">
+
+                    <input
+                        type="text"
+                        id="journalTitleInput"
+                        class="android-title-input"
+                        placeholder="Title (optional)"
+                        maxlength="255"
+                        autocomplete="off"
+                    >
+
+                    <div class="android-editor-divider"></div>
+
+                    <div
+                        id="journalContentEditor"
+                        class="journal-content-editor android-content-editor"
+                        contenteditable="true"
+                        data-placeholder="Write whatever is on your mind..."
+                    ></div>
+
+                    <div class="android-toolbar-scroll">
+                        <div class="editor-toolbar android-editor-toolbar" id="editorToolbar">
+
+                            <button type="button" class="toolbar-button" data-command="bold" title="Bold">
+                                <strong>B</strong>
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="italic" title="Italic">
+                                <em>I</em>
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="underline" title="Underline">
+                                <u>U</u>
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="strikeThrough" title="Strikethrough">
+                                <s>S</s>
+                            </button>
+
+                            <button type="button" class="toolbar-button toolbar-wide-button" id="fontSizeBtn" title="Font size">
+                                Aa
+                            </button>
+
+                            <label class="toolbar-color-button" title="Text color">
+                                A
+                                <span class="color-line"></span>
+                                <input type="color" id="textColorPicker" value="#4B5560">
+                            </label>
+
+                            <label class="toolbar-color-button highlight-button" title="Highlight">
+                                ▰
+                                <input type="color" id="highlightColorPicker" value="#FFF1A8">
+                            </label>
+
+                            <button type="button" class="toolbar-button toolbar-wide-button" id="paragraphBtn" title="Paragraph">
+                                ¶
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="insertUnorderedList" title="Bulleted list">
+                                •
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="insertOrderedList" title="Numbered list">
+                                1.
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="justifyLeft" title="Align left">
+                                ≡
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="justifyCenter" title="Align center">
+                                ☰
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="justifyRight" title="Align right">
+                                ≡
+                            </button>
+
+                            <button type="button" class="toolbar-button" data-command="justifyFull" title="Justify">
+                                ☷
+                            </button>
+
+                            <button type="button" class="toolbar-button" id="quoteBtn" title="Quote">
+                                “ ”
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+     PROFILE
+     ================================= -->
+
+<section class="app-page hidden android-profile-page" id="profilePage">
+
+    <div class="android-profile-heading">
+        <h1>My Profile</h1>
+        <p>Manage your account and security settings</p>
+    </div>
+
+    <div class="profile-two-column-layout">
+
+        <!-- LEFT: PROFILE INFORMATION -->
+        <div class="android-profile-column">
+
+            <div class="android-profile-info-card">
+                <h2>Your Profile</h2>
+                <p class="android-profile-card-subtitle">
+                    Your personal account details
+                </p>
+
+                <div class="android-profile-info-box">
+                    <span class="android-profile-info-label">NICKNAME</span>
+                    <strong id="profileNickname">Friend</strong>
+                </div>
+
+                <div class="android-profile-info-box">
+                    <span class="android-profile-info-label">EMAIL ADDRESS</span>
+                    <strong id="profileEmail">—</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: ACCOUNT & SECURITY -->
+        <div class="android-profile-column">
+
+            <p class="android-profile-section-label">
+                ACCOUNT &amp; SECURITY
+            </p>
+
+            <button
+                type="button"
+                class="android-profile-action-card"
+                id="changePasscodeProfileBtn"
+            >
+                <span class="android-profile-action-title">Change Passcode</span>
+                <span class="android-profile-action-description">
+                    Update your 4-digit journal passcode
+                </span>
+            </button>
+
+            <button
+                type="button"
+                class="android-profile-action-card"
+                id="changePasswordProfileBtn"
+            >
+                <span class="android-profile-action-title">Change Password</span>
+                <span class="android-profile-action-description">
+                    Update your account password
+                </span>
+            </button>
+
+            <button
+                type="button"
+                class="android-profile-action-card"
+                id="passcodeClueProfileBtn"
+            >
+                <span class="android-profile-action-title">Passcode Clue</span>
+                <span class="android-profile-action-description" id="profileCluePreview">
+                    Create or edit your passcode clue
+                </span>
+            </button>
+
+            <button
+                type="button"
+                class="android-profile-logout"
+                id="logoutProfileBtn"
+            >
+                Log Out
+            </button>
+
+        </div>
+
+    </div>
+
+    <p class="android-profile-footer">
+        Your Safe Space is private and belongs to you. ♡
+    </p>
+
+</section>
+<!-- END PROFILE -->
+
+            <!-- =================================
+                 CHANGE PASSCODE PAGE
+                 ================================= -->
+
+            <section
+                class="app-page hidden"
+                id="changePasscodePanel"
+            >
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-header">
+
+                        <div>
+                            <p class="profile-card-label">ACCOUNT &amp; SECURITY</p>
+                            <h2>Change Passcode</h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="profile-panel-close"
+                            data-close-profile-panel
+                            aria-label="Back to profile"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <label
+                        class="profile-form-label"
+                        for="oldPasscodeProfile"
+                    >
+                        Old Passcode
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="oldPasscodeProfile"
+                        type="password"
+                        inputmode="numeric"
+                        maxlength="4"
+                        placeholder="Enter old 4-digit passcode"
+                        autocomplete="off"
+                    >
+
+                    <label
+                        class="profile-form-label"
+                        for="newPasscodeProfile"
+                    >
+                        New Passcode
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="newPasscodeProfile"
+                        type="password"
+                        inputmode="numeric"
+                        maxlength="4"
+                        placeholder="Enter new 4-digit passcode"
+                        autocomplete="new-password"
+                    >
+
+                    <label
+                        class="profile-form-label"
+                        for="confirmPasscodeProfile"
+                    >
+                        Confirm New Passcode
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="confirmPasscodeProfile"
+                        type="password"
+                        inputmode="numeric"
+                        maxlength="4"
+                        placeholder="Re-enter new passcode"
+                        autocomplete="new-password"
+                    >
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="forgotPasscodeProfileBtn"
+                    >
+                        Forgot Passcode?
+                    </button>
+
+                    <button
+                        type="button"
+                        class="profile-save-button"
+                        id="saveProfilePasscodeBtn"
+                    >
+                        Save Passcode
+                    </button>
+
+                </div>
+
+            </section>
+            <!-- END CHANGE PASSCODE PAGE -->
+
+
+            <!-- =================================
+                 CHANGE PASSWORD PAGE
+                 ================================= -->
+
+            <section
+                class="app-page hidden"
+                id="changePasswordPanel"
+            >
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-header">
+
+                        <div>
+                            <p class="profile-card-label">ACCOUNT &amp; SECURITY</p>
+                            <h2>Change Password</h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="profile-panel-close"
+                            data-close-profile-panel
+                            aria-label="Back to profile"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <label
+                        class="profile-form-label"
+                        for="oldPasswordProfile"
+                    >
+                        Current Password
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="oldPasswordProfile"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="Enter current password"
+                    >
+
+                    <label
+                        class="profile-form-label"
+                        for="newPasswordProfile"
+                    >
+                        New Password
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="newPasswordProfile"
+                        type="password"
+                        autocomplete="new-password"
+                        placeholder="Enter new password"
+                    >
+
+                    <label
+                        class="profile-form-label"
+                        for="confirmPasswordProfile"
+                    >
+                        Confirm New Password
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="confirmPasswordProfile"
+                        type="password"
+                        autocomplete="new-password"
+                        placeholder="Re-enter new password"
+                    >
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="forgotPasswordProfileBtn"
+                    >
+                        Forgot Password?
+                    </button>
+
+                    <button
+                        type="button"
+                        class="profile-save-button"
+                        id="saveProfilePasswordBtn"
+                    >
+                        Save Password
+                    </button>
+
+                </div>
+
+            </section>
+            <!-- END CHANGE PASSWORD PAGE -->
+
+
+            <!-- =================================
+                 PASSCODE CLUE PAGE
+                 ================================= -->
+
+            <section
+                class="app-page hidden"
+                id="passcodeCluePanel"
+            >
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-header">
+
+                        <div>
+                            <p class="profile-card-label">ACCOUNT &amp; SECURITY</p>
+                            <h2>Passcode Clue</h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="profile-panel-close"
+                            data-close-profile-panel
+                            aria-label="Back to profile"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <label
+                        class="profile-form-label"
+                        for="profileClueInput"
+                    >
+                        Your Clue
+                    </label>
+
+                    <input
+                        class="profile-form-input"
+                        id="profileClueInput"
+                        type="text"
+                        maxlength="100"
+                        placeholder="Enter a helpful clue"
+                    >
+
+                    <p class="profile-form-help">
+                        Choose a clue that helps you remember your passcode without revealing it.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="profile-save-button"
+                        id="saveProfileClueBtn"
+                    >
+                        Save Clue
+                    </button>
+
+                </div>
+
+            </section>
+            <!-- END PASSCODE CLUE PAGE -->
+
+
+        </div>
+        <!-- END APP CONTENT -->
+
+    </section>
+    <!-- END APPLICATION -->
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
