@@ -2669,27 +2669,48 @@ verifyPasscodeBtn?.addEventListener(
             .replaceAll("'", "&#039;");
     }
 
-
 function formatJournalDate(value) {
     if (!value) {
         return "";
     }
 
-    const parsed = new Date(
-        String(value).replace(" ", "T")
+    const rawValue = String(value).trim();
+
+    // Parse MySQL datetime without a timezone as Philippine local time.
+    const match = rawValue.match(
+        /^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?$/
     );
 
+    let parsed;
+
+    if (match) {
+        const [, year, month, day, hour, minute, second = "0"] = match;
+
+        parsed = new Date(
+            Number(year),
+            Number(month) - 1,
+            Number(day),
+            Number(hour),
+            Number(minute),
+            Number(second)
+        );
+    } else {
+        parsed = new Date(rawValue);
+    }
+
     if (Number.isNaN(parsed.getTime())) {
-        return escapeHtml(value);
+        return escapeHtml(rawValue);
     }
 
     const date = parsed.toLocaleDateString("en-US", {
+        timeZone: "Asia/Manila",
         year: "numeric",
         month: "short",
         day: "numeric"
     });
 
     const time = parsed.toLocaleTimeString("en-US", {
+        timeZone: "Asia/Manila",
         hour: "numeric",
         minute: "2-digit",
         hour12: true
@@ -2697,6 +2718,7 @@ function formatJournalDate(value) {
 
     return `${date} · ${time}`;
 }
+
     
     // =====================================================
     // EDIT JOURNAL
