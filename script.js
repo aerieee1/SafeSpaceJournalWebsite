@@ -2669,6 +2669,7 @@ verifyPasscodeBtn?.addEventListener(
             .replaceAll("'", "&#039;");
     }
 
+
 function formatJournalDate(value) {
     if (!value) {
         return "";
@@ -2676,7 +2677,6 @@ function formatJournalDate(value) {
 
     const rawValue = String(value).trim();
 
-    // Parse MySQL datetime without a timezone as Philippine local time.
     const match = rawValue.match(
         /^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?$/
     );
@@ -2686,28 +2686,27 @@ function formatJournalDate(value) {
     if (match) {
         const [, year, month, day, hour, minute, second = "0"] = match;
 
+        // Interpret the database datetime as UTC.
         parsed = new Date(
-            Number(year),
-            Number(month) - 1,
-            Number(day),
-            Number(hour),
-            Number(minute),
-            Number(second)
+            `${year}-${month}-${day}T${hour}:${minute}:${second}Z`
         );
     } else {
-        parsed = new Date(rawValue);
+        // Preserve timezone information if the value includes it.
+        parsed = new Date(rawValue.replace(" ", "T"));
     }
 
     if (Number.isNaN(parsed.getTime())) {
-        return escapeHtml(rawValue);
+        return rawValue;
     }
 
-    const date = parsed.toLocaleDateString("en-US", {
+    const options = {
         timeZone: "Asia/Manila",
         year: "numeric",
         month: "short",
         day: "numeric"
-    });
+    };
+
+    const date = parsed.toLocaleDateString("en-US", options);
 
     const time = parsed.toLocaleTimeString("en-US", {
         timeZone: "Asia/Manila",
@@ -2720,7 +2719,7 @@ function formatJournalDate(value) {
 }
 
     
-    // =====================================================
+    // ====================================================
     // EDIT JOURNAL
     // =====================================================
 
