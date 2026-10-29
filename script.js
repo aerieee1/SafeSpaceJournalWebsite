@@ -2670,43 +2670,34 @@ verifyPasscodeBtn?.addEventListener(
     }
 
 
-    function formatJournalDate(value) {
-
-        if (!value) {
-            return "";
-        }
-
-        const parsed =
-            new Date(
-                String(value)
-                    .replace(
-                        " ",
-                        "T"
-                    )
-            );
-
-        if (
-            Number.isNaN(
-                parsed.getTime()
-            )
-        ) {
-
-            return value;
-        }
-
-        return parsed.toLocaleString(
-            undefined,
-            {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "2-digit"
-            }
-        );
+function formatJournalDate(value) {
+    if (!value) {
+        return "";
     }
 
+    const parsed = new Date(
+        String(value).replace(" ", "T")
+    );
 
+    if (Number.isNaN(parsed.getTime())) {
+        return escapeHtml(value);
+    }
+
+    const date = parsed.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+    });
+
+    const time = parsed.toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+
+    return `${date} · ${time}`;
+}
+    
     // =====================================================
     // EDIT JOURNAL
     // =====================================================
