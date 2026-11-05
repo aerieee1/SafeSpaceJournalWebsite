@@ -48,7 +48,7 @@ button {
 
     padding: 40px 20px;
 
-    background-image: url("bgh2.jpg");
+    background-image: url("images/bgh2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -370,7 +370,7 @@ button {
             rgba(245, 248, 250, .30),
             rgba(245, 248, 250, .30)
         ),
-        url("bgh2.jpg");
+        url("images/bgh2.jpg");
 
     background-position: center;
     background-size: cover;
@@ -3187,4 +3187,46 @@ button {
 #backFromOtpBtn {
     color: #000 !important;
     font-weight: 400 !important;
+}
+
+/* =========================================
+   ACCOUNT RECOVERY SCREEN IMPROVEMENTS
+   ========================================= */
+
+#forgotPasswordRecoveryScreen,
+#forgotPasscodeRecoveryScreen {
+    padding: 20px;
+}
+
+#forgotPasswordRecoveryScreen .screen-title,
+#forgotPasscodeRecoveryScreen .screen-title {
+    color: #4B5560;
+}
+
+#forgotPasswordRecoveryScreen .screen-description,
+#forgotPasscodeRecoveryScreen .screen-description {
+    color: #6D7780;
+}
+
+#forgotPasswordRecoveryScreen .form-input,
+#forgotPasscodeRecoveryScreen .form-input {
+    width: 100%;
+}
+
+#forgotPasswordRecoveryScreen .text-button,
+#forgotPasscodeRecoveryScreen .text-button {
+    color: #4B5560;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    #forgotPasswordRecoveryScreen,
+    #forgotPasscodeRecoveryScreen {
+        padding: 16px;
+    }
+
+    #forgotPasswordRecoveryScreen .screen-title,
+    #forgotPasscodeRecoveryScreen .screen-title {
+        font-size: 24px;
+    }
 }
