@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // HELPER
     // =====================================================
 
-    const $ = id =>
-        document.getElementById(id);
+    const $ = id => document.getElementById(id);
 
     const loginScreen = $("loginScreen");
     const otpScreen = $("otpScreen");
@@ -31,229 +30,125 @@ document.addEventListener("DOMContentLoaded", () => {
     const forgotPasswordBtn = $("forgotPasswordBtn");
 
     const otpEmail = $("otpEmail");
-    const otpInputs =
-        document.querySelectorAll(".otp-input");
+    const otpInputs = document.querySelectorAll(".otp-input");
     const verifyOtpBtn = $("verifyOtpBtn");
     const resendOtpBtn = $("resendOtpBtn");
     const backFromOtpBtn = $("backFromOtpBtn");
     const otpTimer = $("otpTimer");
 
-const verifyPasscodeInputs = document.querySelectorAll(
-    ".verify-passcode-input"
-);
+    const verifyPasscodeInputs =
+        document.querySelectorAll(".verify-passcode-input");
 
-const verifyPasscodeBtn = $("verifyPasscodeBtn");
-const verificationClue = $("verificationClue");
-const forgotPasscodeBtn = $("forgotPasscodeBtn");
-const useAnotherAccountBtn = $("useAnotherAccountBtn");
+    const verifyPasscodeBtn = $("verifyPasscodeBtn");
+    const verificationClue = $("verificationClue");
+    const forgotPasscodeBtn = $("forgotPasscodeBtn");
+    const useAnotherAccountBtn = $("useAnotherAccountBtn");
 
-const passcodeInputs = document.querySelectorAll(
-    ".passcode-input"
-);
+    const passcodeInputs =
+        document.querySelectorAll(".passcode-input");
 
-const savePasscodeBtn = $("savePasscodeBtn");
-const backFromPasscodeBtn = $("backFromPasscodeBtn");
-const passcodeClueInput = $("passcodeClue");
-const saveClueBtn = $("saveClueBtn");
-const backFromClueBtn = $("backFromClueBtn");
+    const savePasscodeBtn = $("savePasscodeBtn");
+    const backFromPasscodeBtn = $("backFromPasscodeBtn");
+    const passcodeClueInput = $("passcodeClue");
+    const saveClueBtn = $("saveClueBtn");
+    const backFromClueBtn = $("backFromClueBtn");
 
-const nicknameInput = $("nickname");
-const finishRegistrationBtn = $("finishRegistrationBtn");
-const backFromNicknameBtn = $("backFromNicknameBtn");
-
-// =====================================================
-// APP PAGES / NAVIGATION
-// =====================================================
-
-const homePage =
-    $("homePage");
-
-const journalPage =
-    $("journalPage");
-
-const writeJournalPage =
-    $("writeJournalPage");
-
-const profilePage =
-    $("profilePage");
+    const nicknameInput = $("nickname");
+    const finishRegistrationBtn = $("finishRegistrationBtn");
+    const backFromNicknameBtn = $("backFromNicknameBtn");
 
 
-const homeGreeting =
-    $("homeGreeting");
+    // =====================================================
+    // APP PAGES / NAVIGATION
+    // =====================================================
+
+    const homePage = $("homePage");
+    const journalPage = $("journalPage");
+    const writeJournalPage = $("writeJournalPage");
+    const profilePage = $("profilePage");
+
+    const homeGreeting = $("homeGreeting");
+
+    const homeNavBtn = $("homeNavBtn");
+    const journalNavBtn = $("journalNavBtn");
+    const profileNavBtn = $("profileNavBtn");
+
+    const writeThoughtBtn = $("writeThoughtBtn");
+    const viewEntriesBtn = $("viewEntriesBtn");
 
 
-const homeNavBtn =
-    $("homeNavBtn");
+    // =====================================================
+    // SIDEBAR
+    // =====================================================
 
-const journalNavBtn =
-    $("journalNavBtn");
+    const sidebar = $("sidebar");
+    const hamburgerBtn = $("hamburgerBtn");
+    const sidebarCloseBtn = $("sidebarCloseBtn");
+    const sidebarOverlay = $("sidebarOverlay");
 
-const profileNavBtn =
-    $("profileNavBtn");
-
-
-const writeThoughtBtn =
-    $("writeThoughtBtn");
-
-const viewEntriesBtn =
-    $("viewEntriesBtn");
-
-
-// =====================================================
-// SIDEBAR
-// =====================================================
-
-const sidebar =
-    $("sidebar");
-
-const hamburgerBtn =
-    $("hamburgerBtn");
-
-const sidebarCloseBtn =
-    $("sidebarCloseBtn");
-
-const sidebarOverlay =
-    $("sidebarOverlay");
 
     // =====================================================
     // JOURNAL LIST
     // =====================================================
 
-    const addEntryBtn =
-        $("addEntryBtn");
-
-    const journalSearchInput =
-        $("journalSearchInput");
-
-    const allEntriesBtn =
-        $("allEntriesBtn");
-
-    const journalStatus =
-        $("journalStatus");
-
-    const journalEntryList =
-        $("journalEntryList");
+    const addEntryBtn = $("addEntryBtn");
+    const journalSearchInput = $("journalSearchInput");
+    const allEntriesBtn = $("allEntriesBtn");
+    const journalStatus = $("journalStatus");
+    const journalEntryList = $("journalEntryList");
 
 
-// =====================================================
-// WRITE JOURNAL
-// =====================================================
+    // =====================================================
+    // WRITE JOURNAL
+    // =====================================================
 
-const backFromWriteBtn =
-    $("backFromWriteBtn");
-
-const cancelEntryBtn =
-    $("cancelEntryBtn");
-
-const saveEntryBtn =
-    $("saveEntryBtn");
-
-const writeJournalHeading =
-    $("writeJournalHeading");
-
-const journalTitleInput =
-    $("journalTitleInput");
-
-const journalContentEditor =
-    $("journalContentEditor");
-
-const editorToolbar =
-    $("editorToolbar");
-
-const fontSizeBtn =
-    $("fontSizeBtn");
-
-const textColorPicker =
-    $("textColorPicker");
-
-const highlightColorPicker =
-    $("highlightColorPicker");
-
-const quoteBtn =
-    $("quoteBtn");
-
-const paragraphBtn =
-    $("paragraphBtn");
-
-const moreFormatBtn =
-    $("moreFormatBtn");
-
-const moreFormatMenu =
-    $("moreFormatMenu");
+    const backFromWriteBtn = $("backFromWriteBtn");
+    const cancelEntryBtn = $("cancelEntryBtn");
+    const saveEntryBtn = $("saveEntryBtn");
+    const writeJournalHeading = $("writeJournalHeading");
+    const journalTitleInput = $("journalTitleInput");
+    const journalContentEditor = $("journalContentEditor");
+    const editorToolbar = $("editorToolbar");
+    const fontSizeBtn = $("fontSizeBtn");
+    const textColorPicker = $("textColorPicker");
+    const highlightColorPicker = $("highlightColorPicker");
+    const quoteBtn = $("quoteBtn");
+    const paragraphBtn = $("paragraphBtn");
+    const moreFormatBtn = $("moreFormatBtn");
+    const moreFormatMenu = $("moreFormatMenu");
 
 
-// =====================================================
-// PROFILE
-// =====================================================
+    // =====================================================
+    // PROFILE
+    // =====================================================
 
-const profileNickname =
-    $("profileNickname");
+    const profileNickname = $("profileNickname");
+    const profileEmail = $("profileEmail");
+    const profileCluePreview = $("profileCluePreview");
 
-const profileEmail =
-    $("profileEmail");
+    const changePasscodeProfileBtn = $("changePasscodeProfileBtn");
+    const changePasswordProfileBtn = $("changePasswordProfileBtn");
+    const passcodeClueProfileBtn = $("passcodeClueProfileBtn");
+    const logoutProfileBtn = $("logoutProfileBtn");
 
-const profileCluePreview =
-    $("profileCluePreview");
+    const changePasscodePanel = $("changePasscodePanel");
+    const changePasswordPanel = $("changePasswordPanel");
+    const passcodeCluePanel = $("passcodeCluePanel");
 
-const changePasscodeProfileBtn =
-    $("changePasscodeProfileBtn");
+    const oldPasscodeProfile = $("oldPasscodeProfile");
+    const newPasscodeProfile = $("newPasscodeProfile");
+    const confirmPasscodeProfile = $("confirmPasscodeProfile");
+    const saveProfilePasscodeBtn = $("saveProfilePasscodeBtn");
+    const forgotPasscodeProfileBtn = $("forgotPasscodeProfileBtn");
 
-const changePasswordProfileBtn =
-    $("changePasswordProfileBtn");
+    const oldPasswordProfile = $("oldPasswordProfile");
+    const newPasswordProfile = $("newPasswordProfile");
+    const confirmPasswordProfile = $("confirmPasswordProfile");
+    const saveProfilePasswordBtn = $("saveProfilePasswordBtn");
+    const forgotPasswordProfileBtn = $("forgotPasswordProfileBtn");
 
-const passcodeClueProfileBtn =
-    $("passcodeClueProfileBtn");
-
-const logoutProfileBtn =
-    $("logoutProfileBtn");
-
-
-const changePasscodePanel =
-    $("changePasscodePanel");
-
-const changePasswordPanel =
-    $("changePasswordPanel");
-
-const passcodeCluePanel =
-    $("passcodeCluePanel");
-
-
-const oldPasscodeProfile =
-    $("oldPasscodeProfile");
-
-const newPasscodeProfile =
-    $("newPasscodeProfile");
-
-const confirmPasscodeProfile =
-    $("confirmPasscodeProfile");
-
-const saveProfilePasscodeBtn =
-    $("saveProfilePasscodeBtn");
-
-const forgotPasscodeProfileBtn =
-    $("forgotPasscodeProfileBtn");
-
-const oldPasswordProfile =
-    $("oldPasswordProfile");
-
-const newPasswordProfile =
-    $("newPasswordProfile");
-
-const confirmPasswordProfile =
-    $("confirmPasswordProfile");
-
-const saveProfilePasswordBtn =
-    $("saveProfilePasswordBtn");
-
-    const forgotPasswordProfileBtn =
-    $("forgotPasswordProfileBtn");
-
-
-const profileClueInput =
-    $("profileClueInput");
-
-const saveProfileClueBtn =
-    $("saveProfileClueBtn");
+    const profileClueInput = $("profileClueInput");
+    const saveProfileClueBtn = $("saveProfileClueBtn");
 
 
     // =====================================================
@@ -261,23 +156,15 @@ const saveProfileClueBtn =
     // =====================================================
 
     let currentPurpose = "";
-
     let timerInterval = null;
-
     let otpExpired = false;
-
     let isSendingOtp = false;
-
     let isVerifyingOtp = false;
-
     let isVerifyingPasscode = false;
-
     let isRegistering = false;
-
     let isSavingEntry = false;
 
     let journalEntries = [];
-
     let editingEntryId = null;
 
     let currentFontIndex = 0;
@@ -294,50 +181,33 @@ const saveProfileClueBtn =
     // API HELPERS
     // =====================================================
 
-    async function postForm(
-        endpoint,
-        data = {}
-    ) {
+    async function postForm(endpoint, data = {}) {
 
-        const body =
-            new URLSearchParams();
+        const body = new URLSearchParams();
 
-        Object.entries(data).forEach(
-            ([key, value]) => {
+        Object.entries(data).forEach(([key, value]) => {
+            body.append(
+                key,
+                value == null ? "" : String(value)
+            );
+        });
 
-                body.append(
-                    key,
-                    value == null
-                        ? ""
-                        : String(value)
-                );
+        const response = await fetch(
+            API_BASE + endpoint,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type":
+                        "application/x-www-form-urlencoded; charset=UTF-8",
+                    "Accept": "application/json"
+                },
+                body: body.toString()
             }
         );
 
-        const response =
-            await fetch(
-                API_BASE + endpoint,
-                {
-                    method: "POST",
-
-                    headers: {
-                        "Content-Type":
-                            "application/x-www-form-urlencoded; charset=UTF-8",
-
-                        "Accept":
-                            "application/json"
-                    },
-
-                    body:
-                        body.toString()
-                }
-            );
-
-        const text =
-            await response.text();
+        const text = await response.text();
 
         if (!text.trim()) {
-
             throw new Error(
                 "The server returned an empty response."
             );
@@ -346,16 +216,9 @@ const saveProfileClueBtn =
         let json;
 
         try {
-
             json = JSON.parse(text);
-
         } catch (error) {
-
-            console.error(
-                "Invalid server response:",
-                text
-            );
-
+            console.error("Invalid server response:", text);
             throw new Error(
                 "The server returned an invalid response."
             );
@@ -369,18 +232,12 @@ const saveProfileClueBtn =
     }
 
 
-    async function postAuthenticatedForm(
-        endpoint,
-        data = {}
-    ) {
+    async function postAuthenticatedForm(endpoint, data = {}) {
 
         const token =
-            localStorage.getItem(
-                "safeSpaceApiToken"
-            ) || "";
+            localStorage.getItem("safeSpaceApiToken") || "";
 
         if (!token) {
-
             throw new Error(
                 "Your session is missing. Please log in again."
             );
@@ -396,64 +253,50 @@ const saveProfileClueBtn =
     }
 
 
-// =====================================================
-// SHOW SCREEN
-// =====================================================
+    // =====================================================
+    // SHOW SCREEN
+    // =====================================================
 
+    function showScreen(screen) {
 
-function showScreen(screen) {
+        [
+            loginScreen,
+            otpScreen,
+            verifyPasscodeScreen,
+            passcodeScreen,
+            clueScreen,
+            nicknameScreen,
+            appScreen
+        ].forEach(item => {
+            item?.classList.add("hidden");
+        });
 
-    [
-        loginScreen,
-        otpScreen,
-        verifyPasscodeScreen,
-        passcodeScreen,
-        clueScreen,
-        nicknameScreen,
-        appScreen
-    ].forEach(item => {
-
-        if (item) {
-            item.classList.add("hidden");
+        if (screen === verifyPasscodeScreen) {
+            hideVerificationClue();
         }
 
-    });
+        screen?.classList.remove("hidden");
 
-    // Itago ang passcode clue kapag binubuksan
-    // ang verification screen.
-    if (screen === verifyPasscodeScreen) {
-        hideVerificationClue();
-    }
-
-    // Ipakita ang screen na pinili.
-    if (screen) {
-        screen.classList.remove("hidden");
-    }
-
-    // Isara ang sidebar kapag umaalis sa app.
-    if (screen !== appScreen) {
-        closeSidebar();
-    }
-}
-
-
-function hideAllAppPages() {
-
-    [
-        homePage,
-        journalPage,
-        writeJournalPage,
-        profilePage,
-        changePasscodePanel,
-        changePasswordPanel,
-        passcodeCluePanel
-    ].forEach(page => {
-
-        if (page) {
-            page.classList.add("hidden");
+        if (screen !== appScreen) {
+            closeSidebar();
         }
-    });
-}
+    }
+
+
+    function hideAllAppPages() {
+
+        [
+            homePage,
+            journalPage,
+            writeJournalPage,
+            profilePage,
+            changePasscodePanel,
+            changePasswordPanel,
+            passcodeCluePanel
+        ].forEach(page => {
+            page?.classList.add("hidden");
+        });
+    }
 
 
     function clearActiveNavigation() {
@@ -463,10 +306,7 @@ function hideAllAppPages() {
             journalNavBtn,
             profileNavBtn
         ].forEach(button => {
-
-            if (button) {
-                button.classList.remove("active");
-            }
+            button?.classList.remove("active");
         });
     }
 
@@ -474,16 +314,11 @@ function hideAllAppPages() {
     function updateHomeGreeting() {
 
         const nickname =
-            localStorage.getItem(
-                "safeSpaceNickname"
-            ) || "Friend";
+            localStorage.getItem("safeSpaceNickname") || "Friend";
 
         if (homeGreeting) {
-
             homeGreeting.textContent =
-                "How are you, " +
-                nickname +
-                "?";
+                "How are you, " + nickname + "?";
         }
     }
 
@@ -491,9 +326,7 @@ function hideAllAppPages() {
     function openApp() {
 
         showScreen(appScreen);
-
         openAppPage("home");
-
         updateHomeGreeting();
     }
 
@@ -501,58 +334,29 @@ function hideAllAppPages() {
     function openAppPage(pageName) {
 
         hideAllAppPages();
-
         clearActiveNavigation();
 
         if (pageName === "home") {
-
-            homePage?.classList.remove(
-                "hidden"
-            );
-
-            homeNavBtn?.classList.add(
-                "active"
-            );
-
+            homePage?.classList.remove("hidden");
+            homeNavBtn?.classList.add("active");
             updateHomeGreeting();
         }
 
         if (pageName === "journal") {
-
-            journalPage?.classList.remove(
-                "hidden"
-            );
-
-            journalNavBtn?.classList.add(
-                "active"
-            );
-
+            journalPage?.classList.remove("hidden");
+            journalNavBtn?.classList.add("active");
             loadJournalEntries();
         }
 
         if (pageName === "write") {
-
-            writeJournalPage?.classList.remove(
-                "hidden"
-            );
-
-            journalNavBtn?.classList.add(
-                "active"
-            );
+            writeJournalPage?.classList.remove("hidden");
+            journalNavBtn?.classList.add("active");
         }
 
         if (pageName === "profile") {
-
-            profilePage?.classList.remove(
-                "hidden"
-            );
-
-            profileNavBtn?.classList.add(
-                "active"
-            );
-
+            profilePage?.classList.remove("hidden");
+            profileNavBtn?.classList.add("active");
             updateProfileView();
-
             closeProfilePanels();
         }
 
@@ -572,59 +376,31 @@ function hideAllAppPages() {
     function openSidebar() {
 
         sidebar?.classList.add("open");
-
-        sidebarOverlay?.classList.add(
-            "show"
-        );
-
-        document.body.style.overflow =
-            "hidden";
+        sidebarOverlay?.classList.add("show");
+        document.body.style.overflow = "hidden";
     }
 
 
     function closeSidebar() {
 
         sidebar?.classList.remove("open");
-
-        sidebarOverlay?.classList.remove(
-            "show"
-        );
-
-        document.body.style.overflow =
-            "";
+        sidebarOverlay?.classList.remove("show");
+        document.body.style.overflow = "";
     }
 
 
-    hamburgerBtn?.addEventListener(
-        "click",
-        openSidebar
-    );
-
-    sidebarCloseBtn?.addEventListener(
-        "click",
-        closeSidebar
-    );
-
-    sidebarOverlay?.addEventListener(
-        "click",
-        closeSidebar
-    );
+    hamburgerBtn?.addEventListener("click", openSidebar);
+    sidebarCloseBtn?.addEventListener("click", closeSidebar);
+    sidebarOverlay?.addEventListener("click", closeSidebar);
 
 
-    document.addEventListener(
-        "keydown",
-        event => {
+    document.addEventListener("keydown", event => {
 
-            if (event.key === "Escape") {
-
-                closeSidebar();
-
-                moreFormatMenu?.classList.add(
-                    "hidden"
-                );
-            }
+        if (event.key === "Escape") {
+            closeSidebar();
+            moreFormatMenu?.classList.add("hidden");
         }
-    );
+    });
 
 
     // =====================================================
@@ -661,25 +437,14 @@ function hideAllAppPages() {
     // PASSWORD SHOW / HIDE
     // =====================================================
 
-    togglePassword?.addEventListener(
-        "click",
-        () => {
+    togglePassword?.addEventListener("click", () => {
 
-            if (
-                passwordInput.type ===
-                "password"
-            ) {
-
-                passwordInput.type =
-                    "text";
-
-            } else {
-
-                passwordInput.type =
-                    "password";
-            }
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
         }
-    );
+    });
 
 
     // =====================================================
@@ -688,31 +453,18 @@ function hideAllAppPages() {
 
     function validateCredentials() {
 
-        const email =
-            emailInput.value.trim();
-
-        const password =
-            passwordInput.value;
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
 
         if (!email) {
-
-            alert(
-                "Please enter your email."
-            );
-
+            alert("Please enter your email.");
             emailInput.focus();
-
             return false;
         }
 
         if (!password) {
-
-            alert(
-                "Please enter your password."
-            );
-
+            alert("Please enter your password.");
             passwordInput.focus();
-
             return false;
         }
 
@@ -724,382 +476,249 @@ function hideAllAppPages() {
     // LOGIN
     // =====================================================
 
-    loginBtn?.addEventListener(
-        "click",
-        async () => {
+    loginBtn?.addEventListener("click", async () => {
 
-            if (!validateCredentials()) {
+        if (!validateCredentials()) return;
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        loginBtn.disabled = true;
+        loginBtn.textContent = "Logging in...";
+
+        try {
+
+            const result = await postForm(
+                "login.php",
+                { email, password }
+            );
+
+            const data = result.json;
+
+            if (!result.ok || !data.success) {
+                alert(data.message || "Invalid email or password.");
                 return;
             }
 
-            const email =
-                emailInput.value.trim();
+            const token =
+                data.api_token || data.token || "";
 
-            const password =
-                passwordInput.value;
-
-            loginBtn.disabled = true;
-
-            loginBtn.textContent =
-                "Logging in...";
-
-            try {
-
-                const result =
-                    await postForm(
-                        "login.php",
-                        {
-                            email,
-                            password
-                        }
-                    );
-
-                const data =
-                    result.json;
-
-                if (
-                    !result.ok ||
-                    !data.success
-                ) {
-
-                    alert(
-                        data.message ||
-                        "Invalid email or password."
-                    );
-
-                    return;
-                }
-
-                const token =
-                    data.api_token ||
-                    data.token ||
-                    "";
-
-                if (!token) {
-
-                    alert(
-                        "Login succeeded but no API token was returned."
-                    );
-
-                    return;
-                }
-
-                localStorage.setItem(
-                    "safeSpaceApiToken",
-                    token
-                );
-
-                if (
-                    data.user_id !==
-                    undefined
-                ) {
-
-                    localStorage.setItem(
-                        "safeSpaceUserId",
-                        String(data.user_id)
-                    );
-                }
-
-                localStorage.setItem(
-                    "safeSpaceEmail",
-                    data.email || email
-                );
-
-const returnedNickname =
-    data.nickname ||
-    (data.user && data.user.nickname) ||
-    (data.user && data.user.name) ||
-    "";
-
-if (
-    typeof returnedNickname === "string" &&
-    returnedNickname.trim() !== ""
-) {
-    localStorage.setItem(
-        "safeSpaceNickname",
-        returnedNickname.trim()
-    );
-}
-
-                if (
-                    data.passcode_clue !==
-                    undefined
-                ) {
-
-                    localStorage.setItem(
-                        "safeSpacePasscodeClue",
-                        data.passcode_clue || ""
-                    );
-                }
-
-                sessionStorage.setItem(
-                    "safeSpaceEmail",
-                    email
-                );
-
-                sessionStorage.setItem(
-                    "safeSpacePurpose",
-                    "login"
-                );
-
-                currentPurpose =
-                    "login";
-
-                await sendOtp(
-                    email,
-                    "login"
-                );
-
-            } catch (error) {
-
-                console.error(
-                    "Login error:",
-                    error
-                );
-
+            if (!token) {
                 alert(
-                    error.message ||
-                    "Unable to log in."
+                    "Login succeeded but no API token was returned."
                 );
-
-            } finally {
-
-                loginBtn.disabled =
-                    false;
-
-                loginBtn.textContent =
-                    "Log In";
+                return;
             }
+
+            localStorage.setItem("safeSpaceApiToken", token);
+
+            if (data.user_id !== undefined) {
+                localStorage.setItem(
+                    "safeSpaceUserId",
+                    String(data.user_id)
+                );
+            }
+
+            localStorage.setItem(
+                "safeSpaceEmail",
+                data.email || email
+            );
+
+            const returnedNickname =
+                data.nickname ||
+                (data.user && data.user.nickname) ||
+                (data.user && data.user.name) ||
+                "";
+
+            if (
+                typeof returnedNickname === "string" &&
+                returnedNickname.trim() !== ""
+            ) {
+                localStorage.setItem(
+                    "safeSpaceNickname",
+                    returnedNickname.trim()
+                );
+            }
+
+            if (data.passcode_clue !== undefined) {
+                localStorage.setItem(
+                    "safeSpacePasscodeClue",
+                    data.passcode_clue || ""
+                );
+            }
+
+            sessionStorage.setItem("safeSpaceEmail", email);
+            sessionStorage.setItem("safeSpacePurpose", "login");
+
+            currentPurpose = "login";
+
+            await sendOtp(email, "login");
+
+        } catch (error) {
+
+            console.error("Login error:", error);
+
+            alert(error.message || "Unable to log in.");
+
+        } finally {
+
+            loginBtn.disabled = false;
+            loginBtn.textContent = "Log In";
         }
-    );
+    });
 
 
     // =====================================================
     // CREATE ACCOUNT
     // =====================================================
 
-    createAccountBtn?.addEventListener(
-        "click",
-        async () => {
+    createAccountBtn?.addEventListener("click", async () => {
 
-            if (!validateCredentials()) {
+        if (!validateCredentials()) return;
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        createAccountBtn.disabled = true;
+        createAccountBtn.textContent = "Checking...";
+
+        try {
+
+            const result = await postForm(
+                "check_email.php",
+                { email }
+            );
+
+            const data = result.json;
+
+            if (!result.ok) {
+                alert(data.message || "Unable to check email.");
                 return;
             }
 
-            const email =
-                emailInput.value.trim();
-
-            const password =
-                passwordInput.value;
-
-            createAccountBtn.disabled =
-                true;
-
-            createAccountBtn.textContent =
-                "Checking...";
-
-            try {
-
-                const result =
-                    await postForm(
-                        "check_email.php",
-                        { email }
-                    );
-
-                const data =
-                    result.json;
-
-                if (!result.ok) {
-
-                    alert(
-                        data.message ||
-                        "Unable to check email."
-                    );
-
-                    return;
-                }
-
-                if (
-                    data.exists === true ||
-                    data.email_exists === true
-                ) {
-
-                    alert(
-                        data.message ||
-                        "This email is already registered."
-                    );
-
-                    return;
-                }
-
-                sessionStorage.setItem(
-                    "safeSpaceEmail",
-                    email
-                );
-
-                sessionStorage.setItem(
-                    "safeSpacePassword",
-                    password
-                );
-
-                sessionStorage.setItem(
-                    "safeSpacePurpose",
-                    "register"
-                );
-
-                currentPurpose =
-                    "register";
-
-                await sendOtp(
-                    email,
-                    "register"
-                );
-
-            } catch (error) {
-
-                console.error(error);
-
+            if (
+                data.exists === true ||
+                data.email_exists === true
+            ) {
                 alert(
-                    error.message ||
-                    "Unable to create account."
+                    data.message ||
+                    "This email is already registered."
                 );
-
-            } finally {
-
-                createAccountBtn.disabled =
-                    false;
-
-                createAccountBtn.textContent =
-                    "Create Account";
+                return;
             }
+
+            sessionStorage.setItem("safeSpaceEmail", email);
+            sessionStorage.setItem("safeSpacePassword", password);
+            sessionStorage.setItem("safeSpacePurpose", "register");
+
+            currentPurpose = "register";
+
+            await sendOtp(email, "register");
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert(error.message || "Unable to create account.");
+
+        } finally {
+
+            createAccountBtn.disabled = false;
+            createAccountBtn.textContent = "Create Account";
         }
-    );
+    });
 
 
     // =====================================================
     // FORGOT PASSWORD
     // =====================================================
 
-    forgotPasswordBtn?.addEventListener(
-        "click",
-        async () => {
+    forgotPasswordBtn?.addEventListener("click", async () => {
 
-            const email =
-                emailInput.value.trim();
+        const email = emailInput.value.trim();
 
-            if (!email) {
-
-                alert(
-                    "Please enter your email first."
-                );
-
-                emailInput.focus();
-
-                return;
-            }
-
-            sessionStorage.setItem(
-                "safeSpaceEmail",
-                email
-            );
-
-            sessionStorage.setItem(
-                "safeSpacePurpose",
-                "forgot_password"
-            );
-
-            currentPurpose =
-                "forgot_password";
-
-            await sendOtp(
-                email,
-                "forgot_password"
-            );
+        if (!email) {
+            alert("Please enter your email first.");
+            emailInput.focus();
+            return;
         }
-    );
+
+        sessionStorage.setItem("safeSpaceEmail", email);
+        sessionStorage.setItem("safeSpacePurpose", "forgot_password");
+
+        currentPurpose = "forgot_password";
+
+        await sendOtp(email, "forgot_password");
+    });
 
 
     // =====================================================
     // FORGOT PASSCODE FROM PASSCODE VERIFICATION
     // =====================================================
 
-    forgotPasscodeBtn?.addEventListener(
-        "click",
-        async () => {
-            const email =
-                localStorage.getItem("safeSpaceEmail") || "";
+    forgotPasscodeBtn?.addEventListener("click", async () => {
 
-            if (!email) {
-                alert("Please log in again to recover your passcode.");
-                showScreen(loginScreen);
-                return;
-            }
+        const email =
+            localStorage.getItem("safeSpaceEmail") || "";
 
-            sessionStorage.setItem("safeSpaceEmail", email);
-            sessionStorage.setItem("safeSpacePurpose", "forgot_passcode");
-
-            currentPurpose = "forgot_passcode";
-
-            await sendOtp(email, "forgot_passcode");
+        if (!email) {
+            alert(
+                "Please log in again to recover your passcode."
+            );
+            showScreen(loginScreen);
+            return;
         }
-    );
+
+        sessionStorage.setItem("safeSpaceEmail", email);
+        sessionStorage.setItem(
+            "safeSpacePurpose",
+            "forgot_passcode"
+        );
+
+        currentPurpose = "forgot_passcode";
+
+        await sendOtp(email, "forgot_passcode");
+    });
 
 
     // =====================================================
-    // USE ANOTHER ACCOUNT FROM PASSCODE VERIFICATION
+    // USE ANOTHER ACCOUNT
     // =====================================================
 
     useAnotherAccountBtn?.addEventListener(
         "click",
-        () => {
-            logoutFromWebsite(false);
-        }
+        () => logoutFromWebsite(false)
     );
+
 
     // =====================================================
     // OTP
     // =====================================================
 
-    async function sendOtp(
-        email,
-        purpose
-    ) {
+    async function sendOtp(email, purpose) {
 
-        if (isSendingOtp) {
-            return false;
-        }
+        if (isSendingOtp) return false;
 
         isSendingOtp = true;
 
         try {
 
-            const result =
-                await postForm(
-                    "send_otp.php",
-                    {
-                        email,
-                        purpose
-                    }
-                );
+            const result = await postForm(
+                "send_otp.php",
+                { email, purpose }
+            );
 
-            const data =
-                result.json;
+            const data = result.json;
 
-            if (
-                !result.ok ||
-                !data.success
-            ) {
-
+            if (!result.ok || !data.success) {
                 alert(
                     data.message ||
                     "Unable to send verification code."
                 );
-
                 return false;
             }
 
-            currentPurpose =
-                purpose;
+            currentPurpose = purpose;
 
             sessionStorage.setItem(
                 "safeSpacePurpose",
@@ -1107,15 +726,11 @@ if (
             );
 
             if (otpEmail) {
-
-                otpEmail.textContent =
-                    email;
+                otpEmail.textContent = email;
             }
 
             clearOtpInputs();
-
             showScreen(otpScreen);
-
             startOtpTimer();
 
             otpInputs[0]?.focus();
@@ -1124,10 +739,7 @@ if (
 
         } catch (error) {
 
-            console.error(
-                "OTP error:",
-                error
-            );
+            console.error("OTP error:", error);
 
             alert(
                 error.message ||
@@ -1153,98 +765,62 @@ if (
 
     function getOtpValue() {
 
-        return Array.from(
-            otpInputs
-        )
-        .map(input => input.value)
-        .join("");
+        return Array.from(otpInputs)
+            .map(input => input.value)
+            .join("");
     }
 
 
     function setupDigitInputs(inputs) {
 
-        inputs.forEach(
-            (input, index) => {
+        inputs.forEach((input, index) => {
 
-                input.addEventListener(
-                    "input",
-                    () => {
+            input.addEventListener("input", () => {
 
-                        input.value =
-                            input.value.replace(
-                                /\D/g,
-                                ""
-                            );
+                input.value = input.value.replace(/\D/g, "");
 
-                        if (
-                            input.value &&
-                            index <
-                            inputs.length - 1
-                        ) {
+                if (
+                    input.value &&
+                    index < inputs.length - 1
+                ) {
+                    inputs[index + 1].focus();
+                }
+            });
 
-                            inputs[
-                                index + 1
-                            ].focus();
-                        }
+            input.addEventListener("keydown", event => {
+
+                if (
+                    event.key === "Backspace" &&
+                    !input.value &&
+                    index > 0
+                ) {
+                    inputs[index - 1].focus();
+                }
+            });
+
+            input.addEventListener("paste", event => {
+
+                event.preventDefault();
+
+                const text = event.clipboardData
+                    .getData("text")
+                    .replace(/\D/g, "")
+                    .slice(0, inputs.length);
+
+                text.split("").forEach((digit, i) => {
+
+                    if (inputs[i]) {
+                        inputs[i].value = digit;
                     }
-                );
-
-                input.addEventListener(
-                    "keydown",
-                    event => {
-
-                        if (
-                            event.key ===
-                            "Backspace" &&
-                            !input.value &&
-                            index > 0
-                        ) {
-
-                            inputs[
-                                index - 1
-                            ].focus();
-                        }
-                    }
-                );
-
-                input.addEventListener(
-                    "paste",
-                    event => {
-
-                        event.preventDefault();
-
-                        const text =
-                            event.clipboardData
-                                .getData("text")
-                                .replace(/\D/g, "")
-                                .slice(
-                                    0,
-                                    inputs.length
-                                );
-
-                        text
-                            .split("")
-                            .forEach(
-                                (digit, i) => {
-
-                                    if (inputs[i]) {
-                                        inputs[i].value =
-                                            digit;
-                                    }
-                                }
-                            );
-                    }
-                );
-            }
-        );
+                });
+            });
+        });
     }
 
 
     setupDigitInputs(otpInputs);
     setupDigitInputs(passcodeInputs);
-    setupDigitInputs(
-        verifyPasscodeInputs
-    );
+    setupDigitInputs(verifyPasscodeInputs);
 
 
     function startOtpTimer() {
@@ -1257,308 +833,242 @@ if (
 
         updateOtpTimer(seconds);
 
-        timerInterval =
-            setInterval(
-                () => {
+        timerInterval = setInterval(() => {
 
-                    seconds--;
+            seconds--;
 
-                    updateOtpTimer(
-                        seconds
-                    );
+            updateOtpTimer(seconds);
 
-                    if (seconds <= 0) {
+            if (seconds <= 0) {
 
-                        clearInterval(
-                            timerInterval
-                        );
+                clearInterval(timerInterval);
+                otpExpired = true;
 
-                        otpExpired =
-                            true;
+                if (otpTimer) {
+                    otpTimer.textContent =
+                        "OTP expired. Please resend a new code.";
+                }
+            }
 
-                        if (otpTimer) {
-
-                            otpTimer.textContent =
-                                "OTP expired. Please resend a new code.";
-                        }
-                    }
-                },
-                1000
-            );
+        }, 1000);
     }
 
 
     function updateOtpTimer(seconds) {
 
-        if (!otpTimer) {
-            return;
-        }
+        if (!otpTimer) return;
 
-        const minutes =
-            Math.floor(
-                seconds / 60
-            );
-
-        const remaining =
-            seconds % 60;
+        const minutes = Math.floor(seconds / 60);
+        const remaining = seconds % 60;
 
         otpTimer.textContent =
             "OTP expires in " +
-            String(minutes)
-                .padStart(2, "0") +
+            String(minutes).padStart(2, "0") +
             ":" +
-            String(remaining)
-                .padStart(2, "0");
+            String(remaining).padStart(2, "0");
     }
+        // =====================================================
+    // VERIFY OTP
+    // =====================================================
 
+    verifyOtpBtn?.addEventListener("click", async () => {
 
-    verifyOtpBtn?.addEventListener(
-        "click",
-        async () => {
+        if (isVerifyingOtp) return;
 
-            if (isVerifyingOtp) {
-                return;
-            }
+        const otp = getOtpValue();
 
-            const otp =
-                getOtpValue();
+        const email =
+            sessionStorage.getItem("safeSpaceEmail") || "";
 
-            const email =
-                sessionStorage.getItem(
-                    "safeSpaceEmail"
-                ) || "";
+        const purpose =
+            sessionStorage.getItem("safeSpacePurpose") ||
+            currentPurpose;
 
-            const purpose =
-                sessionStorage.getItem(
-                    "safeSpacePurpose"
-                ) ||
-                currentPurpose;
-
-            if (otp.length !== 6) {
-
-                alert(
-                    "Please enter the complete 6-digit verification code."
-                );
-
-                return;
-            }
-
-            if (otpExpired) {
-
-                alert(
-                    "Your OTP has expired. Please resend a new code."
-                );
-
-                return;
-            }
-
-            isVerifyingOtp = true;
-
-            verifyOtpBtn.disabled =
-                true;
-
-            verifyOtpBtn.textContent =
-                "Verifying...";
-
-            try {
-
-                const result =
-                    await postForm(
-                        "verify_otp.php",
-                        {
-                            email,
-                            otp,
-                            purpose
-                        }
-                    );
-
-                const data =
-                    result.json;
-
-                if (
-                    !result.ok ||
-                    !data.success
-                ) {
-
-                    alert(
-                        data.message ||
-                        "Invalid verification code."
-                    );
-
-                    return;
-                }
-
-                clearInterval(
-                    timerInterval
-                );
-
-                if (
-                    data.reset_token
-                ) {
-
-                    sessionStorage.setItem(
-                        "safeSpaceResetToken",
-                        data.reset_token
-                    );
-                }
-
-                if (
-                    purpose ===
-                    "register"
-                ) {
-
-                    clearPasscodeInputs();
-
-                    showScreen(
-                        passcodeScreen
-                    );
-
-                    passcodeInputs[0]?.focus();
-
-                    return;
-                }
-
-                if (
-                    purpose ===
-                    "login"
-                ) {
-
-localStorage.setItem(
-    "safeSpaceOtpVerified",
-    "true"
-);
-
-clearVerifyPasscodeInputs();
-
-if (verificationClue) {
-    verificationClue.textContent = "";
-    verificationClue.classList.add(
-        "hidden"
-    );
-}
-
-showScreen(
-    verifyPasscodeScreen
-);
-
-                    verifyPasscodeInputs[
-                        0
-                    ]?.focus();
-
-                    return;
-                }
-
-// =====================================================
-// RECOVERY AFTER SUCCESSFUL OTP
-// =====================================================
-
-if (
-    purpose ===
-    "forgot_password"
-) {
-
-    alert(
-        "Email verified successfully. You can now create a new password."
-    );
-
-    showScreen(
-        appScreen
-    );
-
-    openProfilePanel(
-        changePasswordPanel
-    );
-
-    if (oldPasswordProfile) {
-        oldPasswordProfile.value = "";
-        oldPasswordProfile.disabled = true;
-        oldPasswordProfile.placeholder =
-            "Verified through email OTP";
-    }
-
-    if (newPasswordProfile) {
-        newPasswordProfile.value = "";
-        newPasswordProfile.focus();
-    }
-
-    if (confirmPasswordProfile) {
-        confirmPasswordProfile.value = "";
-    }
-
-    sessionStorage.setItem(
-        "safeSpaceProfileRecoveryMode",
-        "forgot_password"
-    );
-
-    return;
-}
-
-
-if (
-    purpose ===
-    "forgot_passcode"
-) {
-
-    alert(
-        "Email verified successfully. You can now create a new passcode."
-    );
-
-    showScreen(
-        appScreen
-    );
-
-    openProfilePanel(
-        changePasscodePanel
-    );
-
-    if (oldPasscodeProfile) {
-        oldPasscodeProfile.value = "";
-        oldPasscodeProfile.disabled = true;
-        oldPasscodeProfile.placeholder =
-            "Verified through email OTP";
-    }
-
-    if (newPasscodeProfile) {
-        newPasscodeProfile.value = "";
-        newPasscodeProfile.focus();
-    }
-
-    if (confirmPasscodeProfile) {
-        confirmPasscodeProfile.value = "";
-    }
-
-    sessionStorage.setItem(
-        "safeSpaceProfileRecoveryMode",
-        "forgot_passcode"
-    );
-
-    return;
-}
-
-            } catch (error) {
-
-                console.error(
-                    "Verify OTP error:",
-                    error
-                );
-
-                alert(
-                    error.message ||
-                    "Unable to verify OTP."
-                );
-
-            } finally {
-
-                isVerifyingOtp = false;
-
-                verifyOtpBtn.disabled =
-                    false;
-
-                verifyOtpBtn.textContent =
-                    "Verify";
-            }
+        if (otp.length !== 6) {
+            alert(
+                "Please enter the complete 6-digit verification code."
+            );
+            return;
         }
-    );
+
+        if (otpExpired) {
+            alert(
+                "Your OTP has expired. Please resend a new code."
+            );
+            return;
+        }
+
+        isVerifyingOtp = true;
+
+        verifyOtpBtn.disabled = true;
+        verifyOtpBtn.textContent = "Verifying...";
+
+        try {
+
+            const result = await postForm(
+                "verify_otp.php",
+                {
+                    email,
+                    otp,
+                    purpose
+                }
+            );
+
+            const data = result.json;
+
+            if (!result.ok || !data.success) {
+                alert(
+                    data.message ||
+                    "Invalid verification code."
+                );
+                return;
+            }
+
+            clearInterval(timerInterval);
+
+            if (data.reset_token) {
+                sessionStorage.setItem(
+                    "safeSpaceResetToken",
+                    data.reset_token
+                );
+            }
+
+            // =============================================
+            // REGISTRATION
+            // =============================================
+
+            if (purpose === "register") {
+
+                clearPasscodeInputs();
+                showScreen(passcodeScreen);
+                passcodeInputs[0]?.focus();
+
+                return;
+            }
+
+            // =============================================
+            // LOGIN
+            // =============================================
+
+            if (purpose === "login") {
+
+                localStorage.setItem(
+                    "safeSpaceOtpVerified",
+                    "true"
+                );
+
+                clearVerifyPasscodeInputs();
+
+                if (verificationClue) {
+                    verificationClue.textContent = "";
+                    verificationClue.classList.add("hidden");
+                }
+
+                showScreen(verifyPasscodeScreen);
+                verifyPasscodeInputs[0]?.focus();
+
+                return;
+            }
+
+            // =============================================
+            // FORGOT PASSWORD
+            // =============================================
+
+            if (purpose === "forgot_password") {
+
+                sessionStorage.setItem(
+                    "safeSpaceProfileRecoveryMode",
+                    "forgot_password"
+                );
+
+                alert(
+                    "Email verified successfully. You can now create a new password."
+                );
+
+                showScreen(appScreen);
+                openProfilePanel(changePasswordPanel);
+
+                if (oldPasswordProfile) {
+                    oldPasswordProfile.value = "";
+                    oldPasswordProfile.disabled = true;
+                    oldPasswordProfile.placeholder =
+                        "Verified through email OTP";
+                }
+
+                if (newPasswordProfile) {
+                    newPasswordProfile.value = "";
+                    newPasswordProfile.focus();
+                }
+
+                if (confirmPasswordProfile) {
+                    confirmPasswordProfile.value = "";
+                }
+
+                return;
+            }
+
+            // =============================================
+            // FORGOT PASSCODE
+            // =============================================
+
+            if (purpose === "forgot_passcode") {
+
+                sessionStorage.setItem(
+                    "safeSpaceProfileRecoveryMode",
+                    "forgot_passcode"
+                );
+
+                // Clear passcode fields.
+                if (oldPasscodeProfile) {
+                    oldPasscodeProfile.value = "";
+                    oldPasscodeProfile.disabled = true;
+                    oldPasscodeProfile.placeholder =
+                        "Verified through email OTP";
+                }
+
+                if (newPasscodeProfile) {
+                    newPasscodeProfile.value = "";
+                }
+
+                if (confirmPasscodeProfile) {
+                    confirmPasscodeProfile.value = "";
+                }
+
+                // Prepare an empty field for the new clue.
+                if (profileClueInput) {
+                    profileClueInput.value = "";
+                }
+
+                alert(
+                    "Email verified successfully. You can now create a new passcode."
+                );
+
+                showScreen(appScreen);
+                openProfilePanel(changePasscodePanel);
+
+                newPasscodeProfile?.focus();
+
+                return;
+            }
+
+        } catch (error) {
+
+            console.error("Verify OTP error:", error);
+
+            alert(
+                error.message ||
+                "Unable to verify OTP."
+            );
+
+        } finally {
+
+            isVerifyingOtp = false;
+
+            verifyOtpBtn.disabled = false;
+            verifyOtpBtn.textContent = "Verify";
+        }
+    });
+
 
     // =====================================================
     // CREATE PASSCODE
@@ -1574,462 +1084,305 @@ if (
 
     function clearPasscodeInputs() {
 
-        passcodeInputs.forEach(
-            input => {
-                input.value = "";
-            }
-        );
+        passcodeInputs.forEach(input => {
+            input.value = "";
+        });
     }
 
 
     function clearVerifyPasscodeInputs() {
 
-        verifyPasscodeInputs.forEach(
-            input => {
-                input.value = "";
-            }
-        );
+        verifyPasscodeInputs.forEach(input => {
+            input.value = "";
+        });
     }
 
 
-    savePasscodeBtn?.addEventListener(
-        "click",
-        () => {
+    savePasscodeBtn?.addEventListener("click", () => {
 
-            const passcode =
-                getPasscodeValue(
-                    passcodeInputs
-                );
+        const passcode =
+            getPasscodeValue(passcodeInputs);
 
-            if (
-                !/^\d{4}$/.test(
-                    passcode
-                )
-            ) {
-
-                alert(
-                    "Please create a 4-digit passcode."
-                );
-
-                return;
-            }
-
-            sessionStorage.setItem(
-                "safeSpacePasscode",
-                passcode
-            );
-
-            if (passcodeClueInput) {
-                passcodeClueInput.value =
-                    "";
-            }
-
-            showScreen(
-                clueScreen
-            );
-
-            passcodeClueInput?.focus();
+        if (!/^\d{4}$/.test(passcode)) {
+            alert("Please create a 4-digit passcode.");
+            return;
         }
-    );
 
+        sessionStorage.setItem(
+            "safeSpacePasscode",
+            passcode
+        );
 
-    backFromPasscodeBtn?.addEventListener(
-        "click",
-        () => {
-
-            clearPasscodeInputs();
-
-            showScreen(
-                loginScreen
-            );
+        if (passcodeClueInput) {
+            passcodeClueInput.value = "";
         }
-    );
+
+        showScreen(clueScreen);
+        passcodeClueInput?.focus();
+    });
+
+
+    backFromPasscodeBtn?.addEventListener("click", () => {
+
+        clearPasscodeInputs();
+        showScreen(loginScreen);
+    });
 
 
     // =====================================================
     // PASSCODE CLUE REGISTRATION
     // =====================================================
 
-    saveClueBtn?.addEventListener(
-        "click",
-        () => {
+    saveClueBtn?.addEventListener("click", () => {
 
-            const clue =
-                passcodeClueInput.value.trim();
+        const clue = passcodeClueInput.value.trim();
 
-            if (!clue) {
-
-                alert(
-                    "Please enter a passcode clue."
-                );
-
-                return;
-            }
-
-            sessionStorage.setItem(
-                "safeSpacePasscodeClue",
-                clue
-            );
-
-            showScreen(
-                nicknameScreen
-            );
-
-            nicknameInput?.focus();
+        if (!clue) {
+            alert("Please enter a passcode clue.");
+            return;
         }
-    );
+
+        sessionStorage.setItem(
+            "safeSpacePasscodeClue",
+            clue
+        );
+
+        showScreen(nicknameScreen);
+        nicknameInput?.focus();
+    });
 
 
-    backFromClueBtn?.addEventListener(
-        "click",
-        () => {
+    backFromClueBtn?.addEventListener("click", () => {
 
-            showScreen(
-                passcodeScreen
-            );
-        }
-    );
+        showScreen(passcodeScreen);
+    });
 
 
     // =====================================================
     // REGISTRATION
     // =====================================================
 
-    finishRegistrationBtn?.addEventListener(
-        "click",
-        async () => {
+    finishRegistrationBtn?.addEventListener("click", async () => {
 
-            if (isRegistering) {
-                return;
-            }
+        if (isRegistering) return;
 
-            const email =
-                sessionStorage.getItem(
-                    "safeSpaceEmail"
-                ) || "";
+        const email =
+            sessionStorage.getItem("safeSpaceEmail") || "";
 
-            const password =
-                sessionStorage.getItem(
-                    "safeSpacePassword"
-                ) || "";
+        const password =
+            sessionStorage.getItem("safeSpacePassword") || "";
 
-            const passcode =
-                sessionStorage.getItem(
-                    "safeSpacePasscode"
-                ) || "";
+        const passcode =
+            sessionStorage.getItem("safeSpacePasscode") || "";
 
-            const clue =
-                sessionStorage.getItem(
-                    "safeSpacePasscodeClue"
-                ) || "";
+        const clue =
+            sessionStorage.getItem("safeSpacePasscodeClue") || "";
 
-            const nickname =
-                nicknameInput.value.trim();
+        const nickname = nicknameInput.value.trim();
 
-            if (!nickname) {
-
-                alert(
-                    "Please enter your nickname."
-                );
-
-                return;
-            }
-
-            isRegistering = true;
-
-            finishRegistrationBtn.disabled =
-                true;
-
-            finishRegistrationBtn.textContent =
-                "Creating Account...";
-
-            try {
-
-                const result =
-                    await postForm(
-                        "register.php",
-                        {
-                            email,
-                            password,
-                            nickname,
-                            passcode,
-                            passcode_clue:
-                                clue
-                        }
-                    );
-
-                const data =
-                    result.json;
-
-                if (
-                    !result.ok ||
-                    !data.success
-                ) {
-
-                    alert(
-                        data.message ||
-                        "Unable to create account."
-                    );
-
-                    return;
-                }
-
-                let token =
-                    data.api_token ||
-                    data.token ||
-                    "";
-
-                /*
-                 * Some versions of register.php
-                 * do not return an API token.
-                 * Login automatically if needed.
-                 */
-
-                if (!token) {
-
-                    const loginResult =
-                        await postForm(
-                            "login.php",
-                            {
-                                email,
-                                password
-                            }
-                        );
-
-                    if (
-                        loginResult.ok &&
-                        loginResult.json.success
-                    ) {
-
-                        token =
-                            loginResult.json.api_token ||
-                            loginResult.json.token ||
-                            "";
-                    }
-                }
-
-                if (token) {
-
-                    localStorage.setItem(
-                        "safeSpaceApiToken",
-                        token
-                    );
-                }
-
-                if (
-                    data.user_id !==
-                    undefined
-                ) {
-
-                    localStorage.setItem(
-                        "safeSpaceUserId",
-                        String(data.user_id)
-                    );
-                }
-
-                localStorage.setItem(
-                    "safeSpaceEmail",
-                    email
-                );
-
-                localStorage.setItem(
-                    "safeSpaceNickname",
-                    nickname
-                );
-
-                // OTP was already verified before registration continued.
-                // Remember that fact so refresh returns to passcode verification.
-                localStorage.setItem(
-                    "safeSpaceOtpVerified",
-                    "true"
-                );
-
-                localStorage.setItem(
-                    "safeSpacePasscodeClue",
-                    clue
-                );
-
-                sessionStorage.removeItem(
-                    "safeSpacePassword"
-                );
-
-                sessionStorage.removeItem(
-                    "safeSpacePasscode"
-                );
-
-                sessionStorage.removeItem(
-                    "safeSpacePasscodeClue"
-                );
-
-                sessionStorage.removeItem(
-                    "safeSpacePurpose"
-                );
-
-                alert(
-                    data.message ||
-                    "Account created successfully!"
-                );
-
-                openApp();
-
-            } catch (error) {
-
-                console.error(error);
-
-                alert(
-                    error.message ||
-                    "Unable to create account."
-                );
-
-            } finally {
-
-                isRegistering = false;
-
-                finishRegistrationBtn.disabled =
-                    false;
-
-                finishRegistrationBtn.textContent =
-                    "Create Account";
-            }
-        }
-    );
-
-
-    backFromNicknameBtn?.addEventListener(
-        "click",
-        () => {
-
-            showScreen(
-                clueScreen
-            );
-        }
-    );
-
-
-// =====================================================
-// LOGIN PASSCODE
-// =====================================================
-
-function updateVerificationClue(clueFromServer = "") {
-
-    const clue =
-        clueFromServer ||
-        localStorage.getItem(
-            "safeSpacePasscodeClue"
-        ) ||
-        "";
-
-    if (!verificationClue) {
-        return;
-    }
-
-    if (clue) {
-
-        verificationClue.textContent =
-            "Clue: " + clue;
-
-        verificationClue.classList.remove(
-            "hidden"
-        );
-
-    } else {
-
-        verificationClue.textContent =
-            "No passcode clue available.";
-
-        verificationClue.classList.remove(
-            "hidden"
-        );
-    }
-}
-
-
-function hideVerificationClue() {
-
-    if (!verificationClue) {
-        return;
-    }
-
-    verificationClue.textContent = "";
-
-    verificationClue.classList.add(
-        "hidden"
-    );
-}
-
-
-verifyPasscodeBtn?.addEventListener(
-    "click",
-    async () => {
-
-        if (isVerifyingPasscode) {
+        if (!nickname) {
+            alert("Please enter your nickname.");
             return;
         }
 
-        const passcode =
-            getPasscodeValue(
-                verifyPasscodeInputs
+        isRegistering = true;
+
+        finishRegistrationBtn.disabled = true;
+        finishRegistrationBtn.textContent = "Creating Account...";
+
+        try {
+
+            const result = await postForm(
+                "register.php",
+                {
+                    email,
+                    password,
+                    nickname,
+                    passcode,
+                    passcode_clue: clue
+                }
             );
 
-        if (
-            !/^\d{4}$/.test(
-                passcode
-            )
-        ) {
+            const data = result.json;
 
+            if (!result.ok || !data.success) {
+                alert(
+                    data.message ||
+                    "Unable to create account."
+                );
+                return;
+            }
+
+            let token =
+                data.api_token ||
+                data.token ||
+                "";
+
+            // Automatically log in if register.php
+            // does not return an API token.
+
+            if (!token) {
+
+                const loginResult = await postForm(
+                    "login.php",
+                    {
+                        email,
+                        password
+                    }
+                );
+
+                if (
+                    loginResult.ok &&
+                    loginResult.json.success
+                ) {
+                    token =
+                        loginResult.json.api_token ||
+                        loginResult.json.token ||
+                        "";
+                }
+            }
+
+            if (token) {
+                localStorage.setItem(
+                    "safeSpaceApiToken",
+                    token
+                );
+            }
+
+            if (data.user_id !== undefined) {
+                localStorage.setItem(
+                    "safeSpaceUserId",
+                    String(data.user_id)
+                );
+            }
+
+            localStorage.setItem("safeSpaceEmail", email);
+            localStorage.setItem("safeSpaceNickname", nickname);
+
+            localStorage.setItem(
+                "safeSpaceOtpVerified",
+                "true"
+            );
+
+            localStorage.setItem(
+                "safeSpacePasscodeClue",
+                clue
+            );
+
+            sessionStorage.removeItem("safeSpacePassword");
+            sessionStorage.removeItem("safeSpacePasscode");
+            sessionStorage.removeItem("safeSpacePasscodeClue");
+            sessionStorage.removeItem("safeSpacePurpose");
+
+            alert(
+                data.message ||
+                "Account created successfully!"
+            );
+
+            openApp();
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert(
+                error.message ||
+                "Unable to create account."
+            );
+
+        } finally {
+
+            isRegistering = false;
+
+            finishRegistrationBtn.disabled = false;
+            finishRegistrationBtn.textContent = "Create Account";
+        }
+    });
+
+
+    backFromNicknameBtn?.addEventListener("click", () => {
+
+        showScreen(clueScreen);
+    });
+
+
+    // =====================================================
+    // LOGIN PASSCODE
+    // =====================================================
+
+    function updateVerificationClue(clueFromServer = "") {
+
+        const clue =
+            clueFromServer ||
+            localStorage.getItem("safeSpacePasscodeClue") ||
+            "";
+
+        if (!verificationClue) return;
+
+        if (clue) {
+
+            verificationClue.textContent =
+                "Clue: " + clue;
+
+            verificationClue.classList.remove("hidden");
+
+        } else {
+
+            verificationClue.textContent =
+                "No passcode clue available.";
+
+            verificationClue.classList.remove("hidden");
+        }
+    }
+
+
+    function hideVerificationClue() {
+
+        if (!verificationClue) return;
+
+        verificationClue.textContent = "";
+        verificationClue.classList.add("hidden");
+    }
+
+
+    verifyPasscodeBtn?.addEventListener("click", async () => {
+
+        if (isVerifyingPasscode) return;
+
+        const passcode =
+            getPasscodeValue(verifyPasscodeInputs);
+
+        if (!/^\d{4}$/.test(passcode)) {
             alert(
                 "Please enter your complete 4-digit passcode."
             );
-
             return;
         }
 
         isVerifyingPasscode = true;
 
-        verifyPasscodeBtn.disabled =
-            true;
-
-        verifyPasscodeBtn.textContent =
-            "Checking...";
+        verifyPasscodeBtn.disabled = true;
+        verifyPasscodeBtn.textContent = "Checking...";
 
         try {
 
-            const result =
-                await postAuthenticatedForm(
-                    "verify_passcode.php",
-                    {
-                        passcode
-                    }
-                );
+            const result = await postAuthenticatedForm(
+                "verify_passcode.php",
+                { passcode }
+            );
 
-            const data =
-                result.json;
+            const data = result.json;
 
-            // =========================================
+            // =============================================
             // INCORRECT PASSCODE
-            // =========================================
+            // =============================================
 
-            if (
-                !result.ok ||
-                !data.success
-            ) {
+            if (!result.ok || !data.success) {
 
                 alert(
                     data.message ||
                     "Incorrect passcode."
                 );
-
-                /*
-                 * verify_passcode.php returns:
-                 *
-                 * {
-                 *     success: false,
-                 *     message: "Incorrect passcode.",
-                 *     clue: "..."
-                 * }
-                 *
-                 * Use the server clue first.
-                 */
 
                 if (data.clue) {
 
@@ -2038,9 +1391,7 @@ verifyPasscodeBtn?.addEventListener(
                         data.clue
                     );
 
-                    updateVerificationClue(
-                        data.clue
-                    );
+                    updateVerificationClue(data.clue);
 
                 } else {
 
@@ -2048,20 +1399,16 @@ verifyPasscodeBtn?.addEventListener(
                 }
 
                 clearVerifyPasscodeInputs();
-                
-                verifyPasscodeInputs[
-                    0
-                ]?.focus();
+                verifyPasscodeInputs[0]?.focus();
 
                 return;
             }
 
-            // =========================================
+            // =============================================
             // CORRECT PASSCODE
-            // =========================================
+            // =============================================
 
             hideVerificationClue();
-
             clearVerifyPasscodeInputs();
 
             openApp();
@@ -2080,17 +1427,13 @@ verifyPasscodeBtn?.addEventListener(
 
         } finally {
 
-            isVerifyingPasscode =
-                false;
+            isVerifyingPasscode = false;
 
-            verifyPasscodeBtn.disabled =
-                false;
-
-            verifyPasscodeBtn.textContent =
-                "Next";
+            verifyPasscodeBtn.disabled = false;
+            verifyPasscodeBtn.textContent = "Next";
         }
-    }
-);
+    });
+
 
     // =====================================================
     // JOURNAL EDITOR
@@ -2101,29 +1444,20 @@ verifyPasscodeBtn?.addEventListener(
         editingEntryId = null;
 
         if (writeJournalHeading) {
-
             writeJournalHeading.textContent =
                 "Write your thoughts";
         }
 
-        journalTitleInput.value =
-            "";
+        journalTitleInput.value = "";
+        journalContentEditor.innerHTML = "";
 
-        journalContentEditor.innerHTML =
-            "";
-
-        moreFormatMenu?.classList.add(
-            "hidden"
-        );
+        moreFormatMenu?.classList.add("hidden");
 
         openAppPage("write");
 
-        setTimeout(
-            () => {
-                journalTitleInput.focus();
-            },
-            100
-        );
+        setTimeout(() => {
+            journalTitleInput.focus();
+        }, 100);
     }
 
 
@@ -2137,19 +1471,12 @@ verifyPasscodeBtn?.addEventListener(
 
         editingEntryId = null;
 
-        journalTitleInput.value =
-            "";
+        journalTitleInput.value = "";
+        journalContentEditor.innerHTML = "";
 
-        journalContentEditor.innerHTML =
-            "";
+        moreFormatMenu?.classList.add("hidden");
 
-        moreFormatMenu?.classList.add(
-            "hidden"
-        );
-
-        openAppPage(
-            "journal"
-        );
+        openAppPage("journal");
     }
 
 
@@ -2164,7 +1491,6 @@ verifyPasscodeBtn?.addEventListener(
     );
 
 
-
     // =====================================================
     // RICH TEXT TOOLBAR
     // =====================================================
@@ -2172,7 +1498,9 @@ verifyPasscodeBtn?.addEventListener(
     let savedEditorRange = null;
     let currentEditorFontSize = 3;
 
+
     function saveEditorSelection() {
+
         const selection = window.getSelection();
 
         if (
@@ -2193,7 +1521,9 @@ verifyPasscodeBtn?.addEventListener(
         }
     }
 
+
     function focusEditor() {
+
         if (!journalContentEditor) return;
 
         journalContentEditor.focus();
@@ -2205,32 +1535,49 @@ verifyPasscodeBtn?.addEventListener(
         if (!selection) return;
 
         try {
+
             selection.removeAllRanges();
             selection.addRange(savedEditorRange);
+
         } catch (error) {
+
             savedEditorRange = null;
         }
     }
+
 
     document.addEventListener("selectionchange", () => {
         saveEditorSelection();
     });
 
-    journalContentEditor?.addEventListener("keyup", saveEditorSelection);
-    journalContentEditor?.addEventListener("mouseup", saveEditorSelection);
-    journalContentEditor?.addEventListener("input", saveEditorSelection);
+    journalContentEditor?.addEventListener(
+        "keyup",
+        saveEditorSelection
+    );
+
+    journalContentEditor?.addEventListener(
+        "mouseup",
+        saveEditorSelection
+    );
+
+    journalContentEditor?.addEventListener(
+        "input",
+        saveEditorSelection
+    );
+
 
     editorToolbar?.addEventListener("mousedown", event => {
-        // Remember the selected text before a toolbar control takes focus.
+
         saveEditorSelection();
 
-        // Keep the selection in place for ordinary toolbar buttons.
         if (event.target.closest("button")) {
             event.preventDefault();
         }
     });
 
+
     editorToolbar?.addEventListener("click", event => {
+
         const button = event.target.closest("[data-command]");
 
         if (!button) return;
@@ -2245,10 +1592,11 @@ verifyPasscodeBtn?.addEventListener(
         saveEditorSelection();
     });
 
+
     fontSizeBtn?.addEventListener("click", () => {
+
         focusEditor();
 
-        // Cycle through several font sizes.
         currentEditorFontSize =
             currentEditorFontSize >= 6
                 ? 2
@@ -2266,7 +1614,9 @@ verifyPasscodeBtn?.addEventListener(
         saveEditorSelection();
     });
 
+
     textColorPicker?.addEventListener("input", event => {
+
         focusEditor();
 
         document.execCommand(
@@ -2278,17 +1628,17 @@ verifyPasscodeBtn?.addEventListener(
         saveEditorSelection();
     });
 
+
     highlightColorPicker?.addEventListener("input", event => {
+
         focusEditor();
 
-        // Try the standard highlight command first.
-        let applied = document.execCommand(
+        const applied = document.execCommand(
             "hiliteColor",
             false,
             event.target.value
         );
 
-        // Fallback for browsers that support backColor instead.
         if (!applied) {
             document.execCommand(
                 "backColor",
@@ -2300,7 +1650,9 @@ verifyPasscodeBtn?.addEventListener(
         saveEditorSelection();
     });
 
+
     paragraphBtn?.addEventListener("click", () => {
+
         focusEditor();
 
         document.execCommand(
@@ -2312,7 +1664,9 @@ verifyPasscodeBtn?.addEventListener(
         saveEditorSelection();
     });
 
+
     quoteBtn?.addEventListener("click", () => {
+
         focusEditor();
 
         document.execCommand(
@@ -2323,138 +1677,95 @@ verifyPasscodeBtn?.addEventListener(
 
         saveEditorSelection();
     });
-
-
-    // =====================================================
+        // =====================================================
     // SAVE JOURNAL ENTRY
     // =====================================================
 
-    saveEntryBtn?.addEventListener(
-        "click",
-        async () => {
+    saveEntryBtn?.addEventListener("click", async () => {
 
-            if (isSavingEntry) {
-                return;
+        if (isSavingEntry) return;
+
+        const title = journalTitleInput.value.trim();
+
+        const content =
+            journalContentEditor.innerHTML.trim();
+
+        const plainText =
+            journalContentEditor.innerText.trim();
+
+        if (!plainText) {
+            alert(
+                "Please write something in your journal."
+            );
+            journalContentEditor.focus();
+            return;
+        }
+
+        isSavingEntry = true;
+
+        saveEntryBtn.disabled = true;
+        saveEntryBtn.textContent = "Saving...";
+
+        try {
+
+            const requestData = {
+                title,
+                content
+            };
+
+            if (editingEntryId) {
+                requestData.entry_id = editingEntryId;
+                requestData.id = editingEntryId;
             }
 
-            const title =
-                journalTitleInput.value.trim();
+            const result = await postAuthenticatedForm(
+                "save_journal_entry.php",
+                requestData
+            );
 
-            const content =
-                journalContentEditor.innerHTML.trim();
+            const data = result.json;
 
-            const plainText =
-                journalContentEditor
-                    .innerText
-                    .trim();
-
-            if (!plainText) {
-
-                alert(
-                    "Please write something in your journal."
-                );
-
-                journalContentEditor.focus();
-
-                return;
-            }
-
-            isSavingEntry = true;
-
-            saveEntryBtn.disabled =
-                true;
-
-            saveEntryBtn.textContent =
-                "Saving...";
-
-            try {
-
-                const requestData = {
-                    title,
-                    content
-                };
-
-                /*
-                 * If editing an existing entry,
-                 * send its ID too.
-                 */
-
-                if (editingEntryId) {
-
-                    requestData.entry_id =
-                        editingEntryId;
-
-                    requestData.id =
-                        editingEntryId;
-                }
-
-                const result =
-                    await postAuthenticatedForm(
-                        "save_journal_entry.php",
-                        requestData
-                    );
-
-                const data =
-                    result.json;
-
-                if (
-                    !result.ok ||
-                    !data.success
-                ) {
-
-                    alert(
-                        data.message ||
-                        "Unable to save journal entry."
-                    );
-
-                    return;
-                }
-
+            if (!result.ok || !data.success) {
                 alert(
                     data.message ||
-                    (
-                        editingEntryId
-                            ? "Journal entry updated!"
-                            : "Journal entry saved!"
-                    )
-                );
-
-                editingEntryId = null;
-
-                journalTitleInput.value =
-                    "";
-
-                journalContentEditor.innerHTML =
-                    "";
-
-                openAppPage(
-                    "journal"
-                );
-
-            } catch (error) {
-
-                console.error(
-                    "Save journal error:",
-                    error
-                );
-
-                alert(
-                    error.message ||
                     "Unable to save journal entry."
                 );
-
-            } finally {
-
-                isSavingEntry = false;
-
-                saveEntryBtn.disabled =
-                    false;
-
-                saveEntryBtn.textContent =
-                    "Save";
+                return;
             }
+
+            alert(
+                data.message ||
+                (
+                    editingEntryId
+                        ? "Journal entry updated!"
+                        : "Journal entry saved!"
+                )
+            );
+
+            editingEntryId = null;
+
+            journalTitleInput.value = "";
+            journalContentEditor.innerHTML = "";
+
+            openAppPage("journal");
+
+        } catch (error) {
+
+            console.error("Save journal error:", error);
+
+            alert(
+                error.message ||
+                "Unable to save journal entry."
+            );
+
+        } finally {
+
+            isSavingEntry = false;
+
+            saveEntryBtn.disabled = false;
+            saveEntryBtn.textContent = "Save";
         }
-    );
+    });
 
 
     // =====================================================
@@ -2463,36 +1774,26 @@ verifyPasscodeBtn?.addEventListener(
 
     async function loadJournalEntries() {
 
-        if (!journalEntryList) {
-            return;
-        }
+        if (!journalEntryList) return;
 
         if (journalStatus) {
-
             journalStatus.textContent =
                 "Loading your journal...";
         }
 
-        journalEntryList.innerHTML =
-            "";
+        journalEntryList.innerHTML = "";
 
         try {
 
-            const result =
-                await postAuthenticatedForm(
-                    "get_journal_entries.php"
-                );
+            const result = await postAuthenticatedForm(
+                "get_journal_entries.php"
+            );
 
-            const data =
-                result.json;
+            const data = result.json;
 
-            if (
-                !result.ok ||
-                !data.success
-            ) {
+            if (!result.ok || !data.success) {
 
                 if (journalStatus) {
-
                     journalStatus.textContent =
                         data.message ||
                         "Unable to load journal entries.";
@@ -2502,29 +1803,19 @@ verifyPasscodeBtn?.addEventListener(
             }
 
             journalEntries =
-                Array.isArray(
-                    data.entries
-                )
+                Array.isArray(data.entries)
                     ? data.entries
-                    : Array.isArray(
-                        data.journal_entries
-                    )
+                    : Array.isArray(data.journal_entries)
                         ? data.journal_entries
                         : [];
 
-            renderJournalEntries(
-                journalEntries
-            );
+            renderJournalEntries(journalEntries);
 
         } catch (error) {
 
-            console.error(
-                "Load journal error:",
-                error
-            );
+            console.error("Load journal error:", error);
 
             if (journalStatus) {
-
                 journalStatus.textContent =
                     error.message ||
                     "Unable to load journal entries.";
@@ -2539,13 +1830,11 @@ verifyPasscodeBtn?.addEventListener(
 
     function renderJournalEntries(entries) {
 
-        journalEntryList.innerHTML =
-            "";
+        journalEntryList.innerHTML = "";
 
         if (!entries.length) {
 
             if (journalStatus) {
-
                 journalStatus.textContent =
                     journalSearchInput?.value.trim()
                         ? "No matching entries found."
@@ -2561,13 +1850,9 @@ verifyPasscodeBtn?.addEventListener(
 
         entries.forEach(entry => {
 
-            const card =
-                document.createElement(
-                    "article"
-                );
+            const card = document.createElement("article");
 
-            card.className =
-                "journal-entry-card";
+            card.className = "journal-entry-card";
 
             const date =
                 entry.created_at ||
@@ -2576,12 +1861,9 @@ verifyPasscodeBtn?.addEventListener(
                 "";
 
             const title =
-                entry.title?.trim() ||
-                "Untitled";
+                entry.title?.trim() || "Untitled";
 
-            const content =
-                entry.content ||
-                "";
+            const content = entry.content || "";
 
             card.innerHTML = `
                 <div class="journal-entry-date">
@@ -2612,49 +1894,23 @@ verifyPasscodeBtn?.addEventListener(
             `;
 
             const contentBox =
-                card.querySelector(
-                    ".journal-entry-content"
-                );
+                card.querySelector(".journal-entry-content");
 
-            /*
-             * Journal content is intentionally
-             * rendered as HTML because Android
-             * and website both store formatted
-             * journal HTML.
-             */
-
-            contentBox.innerHTML =
-                content;
+            contentBox.innerHTML = content;
 
             card
-                .querySelector(
-                    ".journal-edit-button"
-                )
-                .addEventListener(
-                    "click",
-                    () => {
-                        openEditJournalEntry(
-                            entry
-                        );
-                    }
-                );
+                .querySelector(".journal-edit-button")
+                .addEventListener("click", () => {
+                    openEditJournalEntry(entry);
+                });
 
             card
-                .querySelector(
-                    ".journal-delete-button"
-                )
-                .addEventListener(
-                    "click",
-                    () => {
-                        deleteJournalEntry(
-                            entry
-                        );
-                    }
-                );
+                .querySelector(".journal-delete-button")
+                .addEventListener("click", () => {
+                    deleteJournalEntry(entry);
+                });
 
-            journalEntryList.appendChild(
-                card
-            );
+            journalEntryList.appendChild(card);
         });
     }
 
@@ -2670,96 +1926,60 @@ verifyPasscodeBtn?.addEventListener(
     }
 
 
-function formatJournalDate(value) {
-    if (!value) {
-        return "";
-    }
+    function formatJournalDate(value) {
 
-    const rawValue = String(value).trim();
+        if (!value) return "";
 
-    const match = rawValue.match(
-        /^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?$/
-    );
-
-    let parsed;
-
-    if (match) {
-        const [, year, month, day, hour, minute, second = "0"] = match;
-
-        // Interpret the database datetime as UTC.
-        parsed = new Date(
-            `${year}-${month}-${day}T${hour}:${minute}:${second}Z`
+        const parsed = new Date(
+            String(value).replace(" ", "T")
         );
-    } else {
-        // Preserve timezone information if the value includes it.
-        parsed = new Date(rawValue.replace(" ", "T"));
+
+        if (Number.isNaN(parsed.getTime())) {
+            return value;
+        }
+
+        return parsed.toLocaleString(
+            undefined,
+            {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "2-digit"
+            }
+        );
     }
 
-    if (Number.isNaN(parsed.getTime())) {
-        return rawValue;
-    }
 
-    const options = {
-        timeZone: "Asia/Manila",
-        year: "numeric",
-        month: "short",
-        day: "numeric"
-    };
-
-    const date = parsed.toLocaleDateString("en-US", options);
-
-    const time = parsed.toLocaleTimeString("en-US", {
-        timeZone: "Asia/Manila",
-        hour: "numeric",
-        minute: "2-digit",
-        hour12: true
-    });
-
-    return `${date} · ${time}`;
-}
-
-    
-    // ====================================================
+    // =====================================================
     // EDIT JOURNAL
     // =====================================================
 
     function openEditJournalEntry(entry) {
 
         editingEntryId =
-            entry.id ||
-            entry.entry_id;
+            entry.id || entry.entry_id;
 
         if (!editingEntryId) {
-
             alert(
                 "Unable to edit this journal entry."
             );
-
             return;
         }
 
         if (writeJournalHeading) {
-
             writeJournalHeading.textContent =
                 "Edit your thoughts";
         }
 
-        journalTitleInput.value =
-            entry.title || "";
+        journalTitleInput.value = entry.title || "";
+        journalContentEditor.innerHTML = entry.content || "";
 
-        journalContentEditor.innerHTML =
-            entry.content || "";
+        openAppPage("write");
 
-        openAppPage(
-            "write"
-        );
-
-        setTimeout(
-            () => {
-                journalContentEditor.focus();
-            },
-            100
-        );
+        setTimeout(() => {
+            journalContentEditor.focus();
+        }, 100);
     }
 
 
@@ -2767,56 +1987,38 @@ function formatJournalDate(value) {
     // DELETE JOURNAL
     // =====================================================
 
-    async function deleteJournalEntry(
-        entry
-    ) {
+    async function deleteJournalEntry(entry) {
 
-        const id =
-            entry.id ||
-            entry.entry_id;
+        const id = entry.id || entry.entry_id;
 
         if (!id) {
-
             alert(
                 "Unable to delete this journal entry."
             );
-
             return;
         }
 
-        if (
-            !confirm(
-                "Delete this journal entry?"
-            )
-        ) {
-
+        if (!confirm("Delete this journal entry?")) {
             return;
         }
 
         try {
 
-            const result =
-                await postAuthenticatedForm(
-                    "delete_journal_entry.php",
-                    {
-                        entry_id: id,
-                        id
-                    }
-                );
+            const result = await postAuthenticatedForm(
+                "delete_journal_entry.php",
+                {
+                    entry_id: id,
+                    id
+                }
+            );
 
-            const data =
-                result.json;
+            const data = result.json;
 
-            if (
-                !result.ok ||
-                !data.success
-            ) {
-
+            if (!result.ok || !data.success) {
                 alert(
                     data.message ||
                     "Unable to delete journal entry."
                 );
-
                 return;
             }
 
@@ -2824,10 +2026,7 @@ function formatJournalDate(value) {
 
         } catch (error) {
 
-            console.error(
-                "Delete journal error:",
-                error
-            );
+            console.error("Delete journal error:", error);
 
             alert(
                 error.message ||
@@ -2841,128 +2040,79 @@ function formatJournalDate(value) {
     // JOURNAL SEARCH
     // =====================================================
 
-    journalSearchInput?.addEventListener(
-        "input",
-        () => {
+    journalSearchInput?.addEventListener("input", () => {
 
-            const query =
-                journalSearchInput
-                    .value
-                    .trim()
-                    .toLowerCase();
+        const query =
+            journalSearchInput.value.trim().toLowerCase();
 
-            if (!query) {
-
-                renderJournalEntries(
-                    journalEntries
-                );
-
-                return;
-            }
-
-            const filtered =
-                journalEntries.filter(
-                    entry => {
-
-                        const title =
-                            String(
-                                entry.title ||
-                                ""
-                            )
-                            .toLowerCase();
-
-                        const temp =
-                            document.createElement(
-                                "div"
-                            );
-
-                        temp.innerHTML =
-                            entry.content ||
-                            "";
-
-                        const content =
-                            temp.textContent
-                                .toLowerCase();
-
-                        return (
-                            title.includes(
-                                query
-                            ) ||
-                            content.includes(
-                                query
-                            )
-                        );
-                    }
-                );
-
-            renderJournalEntries(
-                filtered
-            );
+        if (!query) {
+            renderJournalEntries(journalEntries);
+            return;
         }
-    );
 
+        const filtered = journalEntries.filter(entry => {
 
-    allEntriesBtn?.addEventListener(
-        "click",
-        () => {
+            const title =
+                String(entry.title || "").toLowerCase();
 
-            if (journalSearchInput) {
+            const temp = document.createElement("div");
 
-                journalSearchInput.value =
-                    "";
-            }
+            temp.innerHTML = entry.content || "";
 
-            renderJournalEntries(
-                journalEntries
+            const content =
+                temp.textContent.toLowerCase();
+
+            return (
+                title.includes(query) ||
+                content.includes(query)
             );
+        });
+
+        renderJournalEntries(filtered);
+    });
+
+
+    allEntriesBtn?.addEventListener("click", () => {
+
+        if (journalSearchInput) {
+            journalSearchInput.value = "";
         }
-    );
+
+        renderJournalEntries(journalEntries);
+    });
 
 
-     // =====================================================
+    // =====================================================
     // PROFILE VIEW
     // =====================================================
 
     function updateProfileView() {
 
         const nickname =
-            localStorage.getItem(
-                "safeSpaceNickname"
-            ) || "Friend";
+            localStorage.getItem("safeSpaceNickname") ||
+            "Friend";
 
         const email =
-            localStorage.getItem(
-                "safeSpaceEmail"
-            ) || "—";
+            localStorage.getItem("safeSpaceEmail") || "—";
 
         const clue =
-            localStorage.getItem(
-                "safeSpacePasscodeClue"
-            ) || "";
+            localStorage.getItem("safeSpacePasscodeClue") || "";
 
         if (profileNickname) {
-
-            profileNickname.textContent =
-                nickname;
+            profileNickname.textContent = nickname;
         }
 
         if (profileEmail) {
-
-            profileEmail.textContent =
-                email;
+            profileEmail.textContent = email;
         }
 
         if (profileCluePreview) {
-
             profileCluePreview.textContent =
-                clue ||
-                "Create or edit your passcode clue";
+                clue || "Create or edit your passcode clue";
         }
 
         if (profileClueInput) {
-
-            profileClueInput.value =
-                clue;
+            profileClueInput.value = clue;
         }
     }
 
@@ -2978,82 +2128,63 @@ function formatJournalDate(value) {
             changePasswordPanel,
             passcodeCluePanel
         ].forEach(panel => {
-
-            panel?.classList.add(
-                "hidden"
-            );
+            panel?.classList.add("hidden");
         });
     }
 
 
-function openProfilePanel(panel) {
+    function openProfilePanel(panel) {
 
-    if (!panel) {
-        return;
+        if (!panel) return;
+
+        hideAllAppPages();
+
+        panel.classList.remove("hidden");
+
+        clearActiveNavigation();
+
+        profileNavBtn?.classList.add("active");
+
+        closeSidebar();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
 
-    // Hide Home, Journal, Write, Profile
-    // and all other settings pages
-    hideAllAppPages();
 
-    // Show only the selected settings page
-    panel.classList.remove("hidden");
+    function backToProfile() {
 
-    // Keep Profile highlighted in sidebar
-    clearActiveNavigation();
+        hideAllAppPages();
 
-    profileNavBtn?.classList.add(
-        "active"
-    );
+        profilePage?.classList.remove("hidden");
 
-    closeSidebar();
+        updateProfileView();
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
+        clearActiveNavigation();
+
+        profileNavBtn?.classList.add("active");
+
+        closeSidebar();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
 
 
-function backToProfile() {
+    // =====================================================
+    // PROFILE FORGOT PASSCODE -> OTP
+    // =====================================================
 
-    // Hide every app page/settings page
-    hideAllAppPages();
-
-    // Show Profile only
-    profilePage?.classList.remove(
-        "hidden"
-    );
-
-    updateProfileView();
-
-    clearActiveNavigation();
-
-    profileNavBtn?.classList.add(
-        "active"
-    );
-
-    closeSidebar();
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-// =====================================================
-// PROFILE FORGOT PASSCODE -> OTP
-// =====================================================
-
-forgotPasscodeProfileBtn
-    ?.addEventListener(
+    forgotPasscodeProfileBtn?.addEventListener(
         "click",
         async () => {
 
             const email =
-                localStorage.getItem(
-                    "safeSpaceEmail"
-                ) || "";
+                localStorage.getItem("safeSpaceEmail") || "";
 
             if (!email) {
                 alert(
@@ -3062,10 +2193,7 @@ forgotPasscodeProfileBtn
                 return;
             }
 
-            sessionStorage.setItem(
-                "safeSpaceEmail",
-                email
-            );
+            sessionStorage.setItem("safeSpaceEmail", email);
 
             sessionStorage.setItem(
                 "safeSpacePurpose",
@@ -3077,60 +2205,47 @@ forgotPasscodeProfileBtn
                 "profile"
             );
 
-            currentPurpose =
-                "forgot_passcode";
+            currentPurpose = "forgot_passcode";
 
-            await sendOtp(
-                email,
-                "forgot_passcode"
-            );
+            await sendOtp(email, "forgot_passcode");
         }
     );
+
 
     // =====================================================
     // OPEN CHANGE PASSCODE PAGE
     // =====================================================
 
-    changePasscodeProfileBtn
-        ?.addEventListener(
-            "click",
-            () => {
-
-                openProfilePanel(
-                    changePasscodePanel
-                );
-            }
-        );
+    changePasscodeProfileBtn?.addEventListener(
+        "click",
+        () => {
+            openProfilePanel(changePasscodePanel);
+        }
+    );
 
 
     // =====================================================
     // OPEN CHANGE PASSWORD PAGE
     // =====================================================
 
-    changePasswordProfileBtn
-        ?.addEventListener(
-            "click",
-            () => {
+    changePasswordProfileBtn?.addEventListener(
+        "click",
+        () => {
+            openProfilePanel(changePasswordPanel);
+        }
+    );
 
-                openProfilePanel(
-                    changePasswordPanel
-                );
-            }
-        );
 
-// =====================================================
-// PROFILE FORGOT PASSWORD -> OTP
-// =====================================================
+    // =====================================================
+    // PROFILE FORGOT PASSWORD -> OTP
+    // =====================================================
 
-forgotPasswordProfileBtn
-    ?.addEventListener(
+    forgotPasswordProfileBtn?.addEventListener(
         "click",
         async () => {
 
             const email =
-                localStorage.getItem(
-                    "safeSpaceEmail"
-                ) || "";
+                localStorage.getItem("safeSpaceEmail") || "";
 
             if (!email) {
                 alert(
@@ -3139,10 +2254,7 @@ forgotPasswordProfileBtn
                 return;
             }
 
-            sessionStorage.setItem(
-                "safeSpaceEmail",
-                email
-            );
+            sessionStorage.setItem("safeSpaceEmail", email);
 
             sessionStorage.setItem(
                 "safeSpacePurpose",
@@ -3154,38 +2266,31 @@ forgotPasswordProfileBtn
                 "profile"
             );
 
-            currentPurpose =
-                "forgot_password";
+            currentPurpose = "forgot_password";
 
-            await sendOtp(
-                email,
-                "forgot_password"
-            );
+            await sendOtp(email, "forgot_password");
         }
     );
-    
+
+
     // =====================================================
     // OPEN PASSCODE CLUE PAGE
     // =====================================================
 
-    passcodeClueProfileBtn
-        ?.addEventListener(
-            "click",
-            () => {
+    passcodeClueProfileBtn?.addEventListener(
+        "click",
+        () => {
 
-                if (profileClueInput) {
-
-                    profileClueInput.value =
-                        localStorage.getItem(
-                            "safeSpacePasscodeClue"
-                        ) || "";
-                }
-
-                openProfilePanel(
-                    passcodeCluePanel
-                );
+            if (profileClueInput) {
+                profileClueInput.value =
+                    localStorage.getItem(
+                        "safeSpacePasscodeClue"
+                    ) || "";
             }
-        );
+
+            openProfilePanel(passcodeCluePanel);
+        }
+    );
 
 
     // =====================================================
@@ -3193,9 +2298,7 @@ forgotPasswordProfileBtn
     // =====================================================
 
     document
-        .querySelectorAll(
-            "[data-close-profile-panel]"
-        )
+        .querySelectorAll("[data-close-profile-panel]")
         .forEach(button => {
 
             button.addEventListener(
@@ -3215,31 +2318,20 @@ forgotPasswordProfileBtn
         confirmPasscodeProfile
     ].forEach(input => {
 
-        input?.addEventListener(
-            "input",
-            () => {
+        input?.addEventListener("input", () => {
 
-                input.value =
-                    input.value
-                        .replace(
-                            /\D/g,
-                            ""
-                        )
-                        .slice(
-                            0,
-                            4
-                        );
-            }
-        );
+            input.value = input.value
+                .replace(/\D/g, "")
+                .slice(0, 4);
+        });
     });
 
 
-// =====================================================
-// CHANGE PASSCODE
-// =====================================================
+    // =====================================================
+    // CHANGE PASSCODE
+    // =====================================================
 
-saveProfilePasscodeBtn
-    ?.addEventListener(
+    saveProfilePasscodeBtn?.addEventListener(
         "click",
         async () => {
 
@@ -3249,76 +2341,51 @@ saveProfilePasscodeBtn
                 );
 
             const isRecovery =
-                recoveryMode ===
-                "forgot_passcode";
+                recoveryMode === "forgot_passcode";
 
             const oldCode =
-                oldPasscodeProfile
-                    .value
-                    .trim();
+                oldPasscodeProfile.value.trim();
 
             const newCode =
-                newPasscodeProfile
-                    .value
-                    .trim();
+                newPasscodeProfile.value.trim();
 
             const confirmCode =
-                confirmPasscodeProfile
-                    .value
-                    .trim();
+                confirmPasscodeProfile.value.trim();
 
 
-            // Normal change only:
-            // old passcode is required.
+            // Old passcode is required only
+            // for a normal passcode change.
+
             if (
                 !isRecovery &&
                 !/^\d{4}$/.test(oldCode)
             ) {
-
                 alert(
                     "Please enter your 4-digit old passcode."
                 );
-
                 oldPasscodeProfile.focus();
-
                 return;
             }
 
 
-            if (
-                !/^\d{4}$/.test(newCode)
-            ) {
-
+            if (!/^\d{4}$/.test(newCode)) {
                 alert(
                     "Please enter a 4-digit new passcode."
                 );
-
                 newPasscodeProfile.focus();
-
                 return;
             }
 
 
-            if (
-                newCode !==
-                confirmCode
-            ) {
-
-                alert(
-                    "New passcodes do not match."
-                );
-
+            if (newCode !== confirmCode) {
+                alert("New passcodes do not match.");
                 confirmPasscodeProfile.focus();
-
                 return;
             }
 
 
-            saveProfilePasscodeBtn.disabled =
-                true;
-
-            saveProfilePasscodeBtn.textContent =
-                "Saving...";
+            saveProfilePasscodeBtn.disabled = true;
+            saveProfilePasscodeBtn.textContent = "Saving...";
 
 
             try {
@@ -3326,19 +2393,15 @@ saveProfilePasscodeBtn
                 let result;
 
 
-                // =====================================
+                // =========================================
                 // FORGOT PASSCODE / OTP RECOVERY
-                // =====================================
+                // =========================================
 
                 if (isRecovery) {
 
                     const email =
-                        sessionStorage.getItem(
-                            "safeSpaceEmail"
-                        ) ||
-                        localStorage.getItem(
-                            "safeSpaceEmail"
-                        ) ||
+                        sessionStorage.getItem("safeSpaceEmail") ||
+                        localStorage.getItem("safeSpaceEmail") ||
                         "";
 
                     const resetToken =
@@ -3346,75 +2409,47 @@ saveProfilePasscodeBtn
                             "safeSpaceResetToken"
                         ) || "";
 
-                    if (
-                        !email ||
-                        !resetToken
-                    ) {
 
+                    if (!email || !resetToken) {
                         alert(
                             "Your recovery session is missing or expired. Please request another OTP."
                         );
-
                         return;
                     }
 
 
-const currentClue =
-    localStorage.getItem(
-        "safeSpacePasscodeClue"
-    ) || "";
+                    // Save ONLY the new passcode here.
+                    // The reset token must remain valid
+                    // until the new clue is saved.
 
-if (!currentClue) {
+                    result = await postForm(
+                        "reset_passcode.php",
+                        {
+                            email,
+                            reset_token: resetToken,
+                            passcode: newCode
+                        }
+                    );
 
-    alert(
-        "Your passcode clue is missing. Please update your clue first."
-    );
-
-    return;
-}
-
-result =
-    await postForm(
-        "reset_passcode.php",
-        {
-            email,
-            reset_token:
-                resetToken,
-            passcode:
-                newCode,
-            passcode_clue:
-                currentClue
-        }
-    );
                 } else {
 
-                    // =================================
+                    // =====================================
                     // NORMAL CHANGE PASSCODE
-                    // =================================
+                    // =====================================
 
-                    result =
-                        await postAuthenticatedForm(
-                            "change_passcode.php",
-                            {
-                                old_passcode:
-                                    oldCode,
-
-                                new_passcode:
-                                    newCode
-                            }
-                        );
+                    result = await postAuthenticatedForm(
+                        "change_passcode.php",
+                        {
+                            old_passcode: oldCode,
+                            new_passcode: newCode
+                        }
+                    );
                 }
 
 
-                const data =
-                    result.json;
+                const data = result.json;
 
-
-                if (
-                    !result.ok ||
-                    !data.success
-                ) {
-
+                if (!result.ok || !data.success) {
                     alert(
                         data.message ||
                         (
@@ -3423,71 +2458,50 @@ result =
                                 : "Unable to update passcode."
                         )
                     );
-
                     return;
                 }
 
 
-                oldPasscodeProfile.value =
-                    "";
-
-                newPasscodeProfile.value =
-                    "";
-
-                confirmPasscodeProfile.value =
-                    "";
+                oldPasscodeProfile.value = "";
+                newPasscodeProfile.value = "";
+                confirmPasscodeProfile.value = "";
 
 
-                // =====================================
+                // =========================================
                 // AFTER FORGOT PASSCODE
-                // Go to Passcode Clue
-                // =====================================
+                // Continue to create a new clue.
+                // =========================================
 
                 if (isRecovery) {
 
-                    sessionStorage.removeItem(
-                        "safeSpaceResetToken"
-                    );
+                    // Do NOT remove the reset token or
+                    // recovery mode yet. The clue-saving
+                    // request still needs both.
 
-                    sessionStorage.removeItem(
-                        "safeSpaceProfileRecoveryMode"
-                    );
-
-                    oldPasscodeProfile.disabled =
-                        false;
+                    oldPasscodeProfile.disabled = false;
 
                     oldPasscodeProfile.placeholder =
                         "Enter old 4-digit passcode";
 
-
-                    const currentClue =
-                        localStorage.getItem(
-                            "safeSpacePasscodeClue"
-                        ) || "";
-
                     if (profileClueInput) {
-                        profileClueInput.value =
-                            currentClue;
+                        profileClueInput.value = "";
                     }
 
-
                     alert(
-                        data.message ||
-                        "Passcode reset successfully!"
+                        "New passcode saved successfully! Now create your new passcode clue."
                     );
 
+                    openProfilePanel(passcodeCluePanel);
 
-                    openProfilePanel(
-                        passcodeCluePanel
-                    );
+                    profileClueInput?.focus();
 
                     return;
                 }
 
 
-                // =====================================
+                // =========================================
                 // NORMAL CHANGE SUCCESS
-                // =====================================
+                // =========================================
 
                 alert(
                     data.message ||
@@ -3517,21 +2531,17 @@ result =
 
             } finally {
 
-                saveProfilePasscodeBtn.disabled =
-                    false;
-
+                saveProfilePasscodeBtn.disabled = false;
                 saveProfilePasscodeBtn.textContent =
                     "Save Passcode";
             }
         }
     );
+        // =====================================================
+    // CHANGE PASSWORD
+    // =====================================================
 
-// =====================================================
-// CHANGE PASSWORD
-// =====================================================
-
-saveProfilePasswordBtn
-    ?.addEventListener(
+    saveProfilePasswordBtn?.addEventListener(
         "click",
         async () => {
 
@@ -3541,8 +2551,7 @@ saveProfilePasswordBtn
                 );
 
             const isRecovery =
-                recoveryMode ===
-                "forgot_password";
+                recoveryMode === "forgot_password";
 
             const oldPassword =
                 oldPasswordProfile.value;
@@ -3554,66 +2563,27 @@ saveProfilePasswordBtn
                 confirmPasswordProfile.value;
 
 
-            // =========================================
-            // OLD PASSWORD
-            // Required only for normal change
-            // =========================================
-
-            if (
-                !isRecovery &&
-                !oldPassword
-            ) {
-
-                alert(
-                    "Please enter your old password."
-                );
-
+            if (!isRecovery && !oldPassword) {
+                alert("Please enter your old password.");
                 oldPasswordProfile.focus();
-
                 return;
             }
-
-
-            // =========================================
-            // NEW PASSWORD
-            // =========================================
 
             if (!newPassword) {
-
-                alert(
-                    "Please enter your new password."
-                );
-
+                alert("Please enter your new password.");
                 newPasswordProfile.focus();
-
                 return;
             }
 
-
-            // =========================================
-            // CONFIRM PASSWORD
-            // =========================================
-
-            if (
-                newPassword !==
-                confirmPassword
-            ) {
-
-                alert(
-                    "New passwords do not match."
-                );
-
+            if (newPassword !== confirmPassword) {
+                alert("New passwords do not match.");
                 confirmPasswordProfile.focus();
-
                 return;
             }
 
 
-            saveProfilePasswordBtn.disabled =
-                true;
-
-            saveProfilePasswordBtn.textContent =
-                "Saving...";
+            saveProfilePasswordBtn.disabled = true;
+            saveProfilePasswordBtn.textContent = "Saving...";
 
 
             try {
@@ -3621,19 +2591,15 @@ saveProfilePasswordBtn
                 let result;
 
 
-                // =====================================
+                // =========================================
                 // FORGOT PASSWORD / OTP RECOVERY
-                // =====================================
+                // =========================================
 
                 if (isRecovery) {
 
                     const email =
-                        sessionStorage.getItem(
-                            "safeSpaceEmail"
-                        ) ||
-                        localStorage.getItem(
-                            "safeSpaceEmail"
-                        ) ||
+                        sessionStorage.getItem("safeSpaceEmail") ||
+                        localStorage.getItem("safeSpaceEmail") ||
                         "";
 
                     const resetToken =
@@ -3642,60 +2608,42 @@ saveProfilePasswordBtn
                         ) || "";
 
 
-                    if (
-                        !email ||
-                        !resetToken
-                    ) {
-
+                    if (!email || !resetToken) {
                         alert(
                             "Your recovery session is missing or expired. Please request another OTP."
                         );
-
                         return;
                     }
 
 
-result =
-    await postForm(
-        "reset_password.php",
-        {
-            email,
-            reset_token:
-                resetToken,
-            new_password:
-                newPassword
-        }
-    );
+                    result = await postForm(
+                        "reset_password.php",
+                        {
+                            email,
+                            reset_token: resetToken,
+                            new_password: newPassword
+                        }
+                    );
 
-} else {
+                } else {
 
-                    // =================================
+                    // =====================================
                     // NORMAL CHANGE PASSWORD
-                    // =================================
+                    // =====================================
 
-                    result =
-                        await postAuthenticatedForm(
-                            "change_password.php",
-                            {
-                                old_password:
-                                    oldPassword,
-
-                                new_password:
-                                    newPassword
-                            }
-                        );
+                    result = await postAuthenticatedForm(
+                        "change_password.php",
+                        {
+                            old_password: oldPassword,
+                            new_password: newPassword
+                        }
+                    );
                 }
 
 
-                const data =
-                    result.json;
+                const data = result.json;
 
-
-                if (
-                    !result.ok ||
-                    !data.success
-                ) {
-
+                if (!result.ok || !data.success) {
                     alert(
                         data.message ||
                         (
@@ -3704,24 +2652,14 @@ result =
                                 : "Unable to update password."
                         )
                     );
-
                     return;
                 }
 
 
-                oldPasswordProfile.value =
-                    "";
+                oldPasswordProfile.value = "";
+                newPasswordProfile.value = "";
+                confirmPasswordProfile.value = "";
 
-                newPasswordProfile.value =
-                    "";
-
-                confirmPasswordProfile.value =
-                    "";
-
-
-                // =====================================
-                // CLEAN RECOVERY DATA
-                // =====================================
 
                 if (isRecovery) {
 
@@ -3737,18 +2675,12 @@ result =
                         "safeSpaceRecoverySource"
                     );
 
-                    oldPasswordProfile.disabled =
-                        false;
+                    oldPasswordProfile.disabled = false;
 
                     oldPasswordProfile.placeholder =
                         "Enter old password";
                 }
 
-
-                // =====================================
-                // PASSWORD SUCCESS
-                // Login again for security
-                // =====================================
 
                 alert(
                     data.message ||
@@ -3760,9 +2692,7 @@ result =
                 );
 
 
-                logoutFromWebsite(
-                    false
-                );
+                logoutFromWebsite(false);
 
 
             } catch (error) {
@@ -3785,121 +2715,197 @@ result =
 
             } finally {
 
-                saveProfilePasswordBtn.disabled =
-                    false;
-
+                saveProfilePasswordBtn.disabled = false;
                 saveProfilePasswordBtn.textContent =
                     "Save Password";
             }
         }
     );
 
+
     // =====================================================
     // UPDATE PASSCODE CLUE
     // =====================================================
 
-    saveProfileClueBtn
-        ?.addEventListener(
-            "click",
-            async () => {
+    saveProfileClueBtn?.addEventListener(
+        "click",
+        async () => {
 
-                const clue =
-                    profileClueInput
-                        .value
-                        .trim();
+            const clue =
+                profileClueInput.value.trim();
 
-                if (!clue) {
+            const recoveryMode =
+                sessionStorage.getItem(
+                    "safeSpaceProfileRecoveryMode"
+                );
 
-                    alert(
-                        "Please enter a clue."
-                    );
+            const isRecovery =
+                recoveryMode === "forgot_passcode";
 
-                    profileClueInput.focus();
 
-                    return;
-                }
+            if (!clue) {
+                alert("Please enter a clue.");
+                profileClueInput.focus();
+                return;
+            }
 
-                if (
-                    clue.length > 255
-                ) {
+            if (clue.length > 255) {
+                alert(
+                    "Clue must not exceed 255 characters."
+                );
+                profileClueInput.focus();
+                return;
+            }
 
-                    alert(
-                        "Clue must not exceed 255 characters."
-                    );
 
-                    return;
-                }
+            saveProfileClueBtn.disabled = true;
+            saveProfileClueBtn.textContent = "Saving...";
 
-                saveProfileClueBtn.disabled =
-                    true;
 
-                saveProfileClueBtn.textContent =
-                    "Saving...";
+            try {
 
-                try {
+                let result;
 
-                    const result =
-                        await postAuthenticatedForm(
-                            "update_passcode_clue.php",
-                            {
-                                passcode_clue:
-                                    clue
-                            }
-                        );
 
-                    const data =
-                        result.json;
+                // =========================================
+                // FORGOT PASSCODE RECOVERY
+                // =========================================
 
-                    if (
-                        !result.ok ||
-                        !data.success
-                    ) {
+                if (isRecovery) {
 
+                    const email =
+                        sessionStorage.getItem("safeSpaceEmail") ||
+                        localStorage.getItem("safeSpaceEmail") ||
+                        "";
+
+                    const resetToken =
+                        sessionStorage.getItem(
+                            "safeSpaceResetToken"
+                        ) || "";
+
+
+                    if (!email || !resetToken) {
                         alert(
-                            data.message ||
-                            "Unable to update passcode clue."
+                            "Your recovery session is missing or expired. Please request another OTP."
                         );
-
                         return;
                     }
 
-                    localStorage.setItem(
-                        "safeSpacePasscodeClue",
-                        clue
+
+                    // Save the new clue and consume
+                    // the reset token only at this step.
+
+                    result = await postForm(
+                        "reset_passcode_clue.php",
+                        {
+                            email,
+                            reset_token: resetToken,
+                            passcode_clue: clue
+                        }
                     );
 
-                    updateProfileView();
+                } else {
 
-                    // Return to Profile after successful save
-                    backToProfile();
+                    // =====================================
+                    // NORMAL CHANGE PASSCODE CLUE
+                    // =====================================
+
+                    result = await postAuthenticatedForm(
+                        "update_passcode_clue.php",
+                        {
+                            passcode_clue: clue
+                        }
+                    );
+                }
+
+
+                const data = result.json;
+
+                if (!result.ok || !data.success) {
+                    alert(
+                        data.message ||
+                        "Unable to update passcode clue."
+                    );
+                    return;
+                }
+
+
+                localStorage.setItem(
+                    "safeSpacePasscodeClue",
+                    clue
+                );
+
+
+                // =========================================
+                // FORGOT PASSCODE RECOVERY SUCCESS
+                // =========================================
+
+                if (isRecovery) {
+
+                    // The backend has now saved the clue
+                    // and marked the reset token as used.
+
+                    sessionStorage.removeItem(
+                        "safeSpaceResetToken"
+                    );
+
+                    sessionStorage.removeItem(
+                        "safeSpaceProfileRecoveryMode"
+                    );
+
+                    sessionStorage.removeItem(
+                        "safeSpaceRecoverySource"
+                    );
 
                     alert(
                         data.message ||
-                        "Passcode clue updated successfully!"
+                        "Passcode and clue reset successfully! Please log in again."
                     );
 
-                } catch (error) {
+                    // Return to Login and clear the
+                    // current authentication session.
 
-                    console.error(
-                        "Update clue error:",
-                        error
-                    );
+                    logoutFromWebsite(false);
 
-                    alert(
-                        error.message ||
-                        "Unable to update passcode clue."
-                    );
-
-                } finally {
-
-                    saveProfileClueBtn.disabled =
-                        false;
-
-                    saveProfileClueBtn.textContent =
-                        "Save Clue";
+                    return;
                 }
+
+
+                // =========================================
+                // NORMAL CLUE UPDATE SUCCESS
+                // =========================================
+
+                updateProfileView();
+
+                backToProfile();
+
+                alert(
+                    data.message ||
+                    "Passcode clue updated successfully!"
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    isRecovery
+                        ? "Reset passcode clue error:"
+                        : "Update clue error:",
+                    error
+                );
+
+                alert(
+                    error.message ||
+                    "Unable to update passcode clue."
+                );
+
+            } finally {
+
+                saveProfileClueBtn.disabled = false;
+                saveProfileClueBtn.textContent = "Save Clue";
             }
-        );
+        }
+    );
 
 
     // =====================================================
@@ -3908,82 +2914,47 @@ result =
 
     function clearAuthentication() {
 
-        localStorage.removeItem(
-            "safeSpaceApiToken"
-        );
+        localStorage.removeItem("safeSpaceApiToken");
+        localStorage.removeItem("safeSpaceUserId");
+        localStorage.removeItem("safeSpaceNickname");
+        localStorage.removeItem("safeSpaceEmail");
+        localStorage.removeItem("safeSpacePasscodeClue");
+        localStorage.removeItem("safeSpaceOtpVerified");
 
-        localStorage.removeItem(
-            "safeSpaceUserId"
-        );
+        sessionStorage.removeItem("safeSpaceEmail");
+        sessionStorage.removeItem("safeSpacePassword");
+        sessionStorage.removeItem("safeSpacePurpose");
+        sessionStorage.removeItem("safeSpacePasscode");
+        sessionStorage.removeItem("safeSpacePasscodeClue");
+        sessionStorage.removeItem("safeSpaceNicknameTemp");
+        sessionStorage.removeItem("safeSpaceResetToken");
 
-        localStorage.removeItem(
-            "safeSpaceNickname"
-        );
-
-        localStorage.removeItem(
-            "safeSpaceEmail"
-        );
-
-        localStorage.removeItem(
-            "safeSpacePasscodeClue"
-        );
-
-        localStorage.removeItem(
-            "safeSpaceOtpVerified"
+        // Also clear recovery state.
+        sessionStorage.removeItem(
+            "safeSpaceProfileRecoveryMode"
         );
 
         sessionStorage.removeItem(
-            "safeSpaceEmail"
-        );
-
-        sessionStorage.removeItem(
-            "safeSpacePassword"
-        );
-
-        sessionStorage.removeItem(
-            "safeSpacePurpose"
-        );
-
-        sessionStorage.removeItem(
-            "safeSpacePasscode"
-        );
-
-        sessionStorage.removeItem(
-            "safeSpacePasscodeClue"
-        );
-
-        sessionStorage.removeItem(
-            "safeSpaceNicknameTemp"
-        );
-
-        sessionStorage.removeItem(
-            "safeSpaceResetToken"
+            "safeSpaceRecoverySource"
         );
     }
 
 
-    function logoutFromWebsite(
-        confirmFirst = true
-    ) {
+    function logoutFromWebsite(confirmFirst = true) {
 
         if (
             confirmFirst &&
-            !confirm(
-                "Log out of Safe Space?"
-            )
+            !confirm("Log out of Safe Space?")
         ) {
-
             return;
         }
 
         clearAuthentication();
 
         closeProfilePanels();
-
         closeSidebar();
 
         editingEntryId = null;
-
         journalEntries = [];
 
         if (emailInput) {
@@ -3994,34 +2965,21 @@ result =
             passwordInput.value = "";
         }
 
-        showScreen(
-            loginScreen
-        );
+        showScreen(loginScreen);
     }
 
 
-    logoutProfileBtn
-        ?.addEventListener(
-            "click",
-            () => {
-
-                logoutFromWebsite(
-                    true
-                );
-            }
-        );
+    logoutProfileBtn?.addEventListener(
+        "click",
+        () => {
+            logoutFromWebsite(true);
+        }
+    );
 
 
     // =====================================================
     // INITIAL PAGE / RESTORE SAVED ACCOUNT
     // =====================================================
-
-    /*
-     * Keep a remembered account across reloads, but require
-     * passcode verification before showing private pages.
-     * The API must still validate the token and protect every
-     * private endpoint server-side.
-     */
 
     const savedApiToken =
         localStorage.getItem("safeSpaceApiToken");
@@ -4032,20 +2990,23 @@ result =
     const savedOtpVerified =
         localStorage.getItem("safeSpaceOtpVerified") === "true";
 
-    if (savedApiToken && savedEmail && savedOtpVerified) {
+
+    if (
+        savedApiToken &&
+        savedEmail &&
+        savedOtpVerified
+    ) {
+
         updateVerificationClue();
         clearVerifyPasscodeInputs();
+
         showScreen(verifyPasscodeScreen);
+
         verifyPasscodeInputs[0]?.focus();
+
     } else {
 
-        // Do not keep a token from a login flow that never completed OTP.
-if (savedApiToken && savedEmail && savedOtpVerified) {
-    hideVerificationClue();
-    clearVerifyPasscodeInputs();
-    showScreen(verifyPasscodeScreen);
-    verifyPasscodeInputs[0]?.focus();
-}
+        // If login was not completed, show Login.
         showScreen(loginScreen);
     }
 
