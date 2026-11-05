@@ -48,7 +48,7 @@ button {
 
     padding: 40px 20px;
 
-    background-image: url("images/bgh2.jpg");
+    background-image: url("bgh2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -370,7 +370,7 @@ button {
             rgba(245, 248, 250, .30),
             rgba(245, 248, 250, .30)
         ),
-        url("images/bgh2.jpg");
+        url("bgh2.jpg");
 
     background-position: center;
     background-size: cover;
