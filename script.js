@@ -333,6 +333,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openAppPage(pageName) {
 
+        appScreen?.classList.remove("security-panel-open");
+
         hideAllAppPages();
         clearActiveNavigation();
 
@@ -645,6 +647,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sessionStorage.setItem("safeSpaceEmail", email);
         sessionStorage.setItem("safeSpacePurpose", "forgot_password");
+        sessionStorage.setItem("safeSpaceRecoverySource", "login");
 
         currentPurpose = "forgot_password";
 
@@ -1935,17 +1938,15 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         if (Number.isNaN(parsed.getTime())) {
-            return value;
+            return String(value).split(/[T ](?=\d{2}:)/)[0];
         }
 
-        return parsed.toLocaleString(
+        return parsed.toLocaleDateString(
             undefined,
             {
                 year: "numeric",
                 month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "2-digit"
+                day: "numeric"
             }
         );
     }
@@ -2137,6 +2138,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!panel) return;
 
+        appScreen?.classList.toggle(
+            "security-panel-open",
+            panel === changePasscodePanel ||
+            panel === changePasswordPanel
+        );
+
         hideAllAppPages();
 
         panel.classList.remove("hidden");
@@ -2155,6 +2162,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function backToProfile() {
+
+        appScreen?.classList.remove("security-panel-open");
 
         hideAllAppPages();
 
@@ -2303,7 +2312,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
             button.addEventListener(
                 "click",
-                backToProfile
+                () => {
+                    const isLoginRecovery =
+                        button.closest("#changePasswordPanel") &&
+                        sessionStorage.getItem(
+                            "safeSpaceRecoverySource"
+                        ) === "login";
+
+                    if (!isLoginRecovery) {
+                        backToProfile();
+                        return;
+                    }
+
+                    sessionStorage.removeItem("safeSpaceResetToken");
+                    sessionStorage.removeItem(
+                        "safeSpaceProfileRecoveryMode"
+                    );
+                    sessionStorage.removeItem("safeSpaceRecoverySource");
+                    sessionStorage.removeItem("safeSpacePurpose");
+                    currentPurpose = "";
+
+                    oldPasswordProfile.value = "";
+                    oldPasswordProfile.disabled = false;
+                    oldPasswordProfile.placeholder =
+                        "Enter current password";
+                    newPasswordProfile.value = "";
+                    confirmPasswordProfile.value = "";
+
+                    appScreen?.classList.remove("security-panel-open");
+                    showScreen(loginScreen);
+                }
             );
         });
 

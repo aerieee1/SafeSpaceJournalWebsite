@@ -3230,3 +3230,26 @@ button {
         font-size: 24px;
     }
 }
+
+.app-screen.security-panel-open .sidebar,
+.app-screen.security-panel-open .sidebar-overlay,
+.app-screen.security-panel-open .app-topbar {
+    display: none;
+}
+
+.app-screen.security-panel-open .app-page:not(.hidden) {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.app-screen.security-panel-open .profile-form-card {
+    width: 100%;
+    max-width: 480px;
+    margin: 0;
+}
