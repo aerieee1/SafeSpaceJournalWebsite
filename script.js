@@ -333,6 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openAppPage(pageName) {
 
+        appScreen?.classList.remove("profile-panel-only");
         hideAllAppPages();
         clearActiveNavigation();
 
@@ -645,6 +646,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sessionStorage.setItem("safeSpaceEmail", email);
         sessionStorage.setItem("safeSpacePurpose", "forgot_password");
+        sessionStorage.setItem("safeSpaceRecoverySource", "login");
 
         currentPurpose = "forgot_password";
 
@@ -1935,17 +1937,15 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         if (Number.isNaN(parsed.getTime())) {
-            return value;
+            return String(value).split(/[T ]/, 1)[0];
         }
 
-        return parsed.toLocaleString(
+        return parsed.toLocaleDateString(
             undefined,
             {
                 year: "numeric",
                 month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "2-digit"
+                day: "numeric"
             }
         );
     }
@@ -2141,6 +2141,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         panel.classList.remove("hidden");
 
+        if (
+            panel === changePasscodePanel ||
+            panel === changePasswordPanel
+        ) {
+            appScreen?.classList.add("profile-panel-only");
+        } else {
+            appScreen?.classList.remove("profile-panel-only");
+        }
+
         clearActiveNavigation();
 
         profileNavBtn?.classList.add("active");
@@ -2156,6 +2165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function backToProfile() {
 
+        appScreen?.classList.remove("profile-panel-only");
         hideAllAppPages();
 
         profilePage?.classList.remove("hidden");
@@ -2303,7 +2313,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             button.addEventListener(
                 "click",
-                backToProfile
+                () => {
+                    if (
+                        sessionStorage.getItem(
+                            "safeSpaceRecoverySource"
+                        ) === "login"
+                    ) {
+                        logoutFromWebsite(false);
+                        return;
+                    }
+
+                    backToProfile();
+                }
             );
         });
 
