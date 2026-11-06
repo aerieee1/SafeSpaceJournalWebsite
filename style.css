@@ -383,6 +383,30 @@ button {
     overflow-y: auto;
 }
 
+.app-screen.profile-panel-only .sidebar,
+.app-screen.profile-panel-only .sidebar-overlay,
+.app-screen.profile-panel-only .app-topbar {
+    display: none;
+}
+
+.app-screen.profile-panel-only .app-page {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 46px 20px 60px;
+}
+
+.app-screen.profile-panel-only .profile-form-card {
+    width: 100%;
+    max-width: 540px;
+    margin-top: 0;
+}
+
 .app-topbar {
     position: sticky;
     top: 0;
